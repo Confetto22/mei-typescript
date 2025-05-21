@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --main-font: "Ubuntu", sans-serif;
+  --main-color: #f8f1e6;
+  --second-font: "Unbounded", sans-serif;
+  --second-color: #ed5a2f;
+  --theme-yellow: #ffc300;
+  --dark-blue: #001d3d;
+  --light-blue: #003566;
+  --theme-green: #404f40;
+  --fancy-font: "Imperial Script", cursive;
+  --text-color: #1a1a1a;
+}
+
+html,
+body {
+  font-family: var(--second-font);
+}
+.welcome h2 {
+  background: -webkit-linear-gradient(#ed5a2f, #001d3d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.always_welcome {
+  font-family: var(--fancy-font);
+}
+
+.values .value:nth-child(3) {
+  border-right: none;
+  border-bottom: none;
+}
+.churchname p {
+  /* font-size: 4rem; */
+  /* text-transform: uppercase; */
+  /* font-weight: 400; */
+  font-family: var(--second-font);
+  /* line-height: 5rem; */
+}
+.churchname b {
+  font-weight: 800;
+}
+.upcoming_text h2 {
+  background: -webkit-linear-gradient(#ed5a2f, #ffc646);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.eventdetName {
+  font-family: var(--second-font);
+}
+.eventContent p {
+  font-family: var(--main-font);
+}
+.evtKey {
+  font-weight: 400;
+}
+.evtValue {
+  font-weight: lighter;
+  font-size: 0.8rem;
+}
+.evtValue a {
+  transition: all 0.3s ease-in;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+.evtValue a:hover {
+  color: var(--second-color);
+  text-underline-offset: 6px;
+}
+.evtContacts {
+  box-shadow: 0 4px 8px 0 rgba(197, 197, 197, 0.164),
+    0 6px 20px 0 rgba(172, 172, 172, 0.218);
+}
+.evtContacts div p {
+  border-bottom: 0.5px solid rgba(192, 192, 192, 0.373);
+  padding-bottom: 0.8rem;
+}
+.evtContacts div p:last-child {
+  border-bottom: none;
+}
