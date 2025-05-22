@@ -68,7 +68,7 @@ const UpcomingEvts = () => {
 
                 // onClick={() => navigate(`/${evt.name}`)}
                 to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
-                className="uppercase border border-[#ffffff29] font-bold py-4 px-7 text-[.9rem] mx-auto"
+                className="uppercase border border-[#ffffff29] font-bold py-4 px-7 text-[.9rem] mx-auto md:mx-[0]"
               >
                 view details
               </Link>

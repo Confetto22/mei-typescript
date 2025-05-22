@@ -1,8 +1,8 @@
 const HeroCard = () => {
   return (
     <section className="herocard relative h-screen w-full bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')] bg-cover bg-center">
-      <div className="cover min-h-screen bg-[#000000bd] p-6 md:p-16 font-[var(--main-font)] flex flex-col justify-center items-start gap-6">
-        <div className="churchname text-[var(--main-color)] font-bold text-[2rem] md:text-[5.6rem] leading-[2.4rem] md:leading-[5rem] uppercase">
+      <div className="cover min-h-screen bg-[#000000bd] p-6 md:py-16 md:px-8 font-[var(--main-font)] flex flex-col justify-center items-start gap-6">
+        <div className="churchname text-[var(--main-color)] font-bold text-[2rem] md:text-[4rem] leading-[2.4rem] md:leading-[4.2rem] uppercase">
           <p>
             <b>m</b>ystery
           </p>
@@ -25,7 +25,7 @@ const HeroCard = () => {
           </button>
         </div>
       </div>
-      <div className="bg-[var(--theme-green)] absolute bottom-0 right-0 w-[40%] h-[20%] rounded-tl-[6rem] flex items-center flex-col justify-center text-white gap-1 max-w-[430px]">
+      <div className="bg-[var(--theme-green)] px-4 absolute bottom-0 right-0   rounded-tl-[6rem] flex items-center flex-col justify-center text-white gap-1 max-w-[460px] py-5">
         <span className="text-[var(--theme-green)] bg-white  font-bold px-2 text-[1rem] md:text-[1.3rem]">
           07:30 AM
         </span>

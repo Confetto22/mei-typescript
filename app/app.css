@@ -49,6 +49,12 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.infoValues p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
 .eventdetName {
   font-family: var(--second-font);
 }
@@ -57,6 +63,13 @@ body {
 }
 .evtKey {
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.evtKey .icon {
+  color: var(--second-color);
+  font-size: 1.2rem;
 }
 .evtValue {
   font-weight: lighter;

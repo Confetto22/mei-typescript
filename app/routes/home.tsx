@@ -1,4 +1,6 @@
 // import CountDown from "~/components/common/countdown/countdown";
+import Footer from "~/components/common/footer";
+import Picsgrid from "~/components/common/picsgrid";
 import HeroCard from "~/components/homepage/herocard";
 import UpcomingEvts from "~/components/homepage/upcomingevts";
 import WeAre from "~/components/homepage/weare";
@@ -22,6 +24,8 @@ export default function Home() {
       <WeAre />
       <UpcomingEvts />
       {/* <CountDown month={5} day={31} year={2025} /> */}
+      {/* <Picsgrid />
+      <Footer /> */}
     </section>
   );
 }

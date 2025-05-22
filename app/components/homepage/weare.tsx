@@ -25,11 +25,11 @@ const WeAre = () => {
             subhead={"who we are"}
             mainhead={"A Christ-Centered Community for Worship & Growth"}
             mainstyle={
-              "font-extrabold leading-6 text-[1.3rem] md:text-[2.2rem] md:leading-8"
+              "font-extrabold leading-6 text-[1.3rem] md:text-[1.7rem] md:leading-8"
             }
             divstyle={"items-start gap-4"}
           />
-          <p className="text-[1rem] md:text-[1.2rem]">
+          <p className="text-[1rem] md:text-[1rem]">
             <b className="capitalize">mystery embassy international</b> is an
             independent, Christ-centered congregation dedicated to worship,
             spiritual growth, and serving our neighbors. We believe in creating
