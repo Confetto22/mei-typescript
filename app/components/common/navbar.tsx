@@ -19,7 +19,7 @@ const Navbar = () => {
         alt="mystery embassy international"
         className="logo max-w-[130px]"
       />
-      <menu className="flex items-center gap-5">
+      <menu className="flex items-center gap-5 hidden md:flex">
         {navLinks.map(({ ref, refLink }) => (
           <Link to={refLink} key={ref} className="text-white">
             {ref}
