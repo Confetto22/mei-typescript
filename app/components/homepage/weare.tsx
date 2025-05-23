@@ -64,7 +64,7 @@ const WeAre = () => {
             </p>
           </div>
         ))}
-        <p className="always_welcome absolute text-[2.4rem] tracking-wider bottom-[-70px] left-0 right-0 mx-auto max-w-[300px] text-center  bg-[#fff]">
+        <p className="always_welcome absolute text-[1.5rem] md:text-[2.4rem] tracking-wider bottom-[-40px] md:bottom-[-70px]  left-0 right-0 mx-auto max-w-[300px] text-center  bg-[#fff] w-[90%]">
           you're always welcome <br /> here
         </p>
       </div>

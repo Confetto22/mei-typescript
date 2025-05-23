@@ -3,6 +3,8 @@
 import { Link } from "react-router";
 import CountDown from "../common/countdown/countdown";
 import { allEvents } from "../common/events";
+import { FaRegClock } from "react-icons/fa6";
+import { LuCalendarDays } from "react-icons/lu";
 // import CountDown from "./common/countdown/CountDown";
 
 const closestEvts = allEvents.slice(0, 3);
@@ -10,9 +12,9 @@ const closestEvts = allEvents.slice(0, 3);
 const UpcomingEvts = () => {
   //   const navigate = useNavigate();
   return (
-    <section className="py-24 upcoming_evts  flex flex-col gap-16 bg-[#1e1e1e] text-stone-200">
-      <div className="upcoming_text px-8 text-center flex flex-col items-center justify-center gap-4">
-        <h2 className="text-[2.5rem] uppercase font-extrabold md:text-[3rem]">
+    <section className="py-24 upcoming_evts  flex flex-col gap-16 bg-[var(--dark-blue)] text-stone-200">
+      <div className="upcoming_text px-8 text-center flex flex-col items-center justify-center gap-4 min-h-[40vh]">
+        <h2 className="text-[2.5rem] uppercase font-extrabold md:text-[2.5rem]">
           upcoming events
         </h2>
         <p className="max-w-[720px] md:text-[1.2rem]">
@@ -23,7 +25,7 @@ const UpcomingEvts = () => {
       </div>
       <div className="dont_miss text-[#fbf0e0]  bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1745707493/homchapel/58-home-5_ohzm9x.webp')] bg-cover bg-center">
         <div className="cover bg-[#0000008e] flex flex-col items-center justify-center min-h-[45vh] md:gap-16 md:min-h-[80vh] gap-6 p-8">
-          <p className="text-[1.6rem] font-semibold capitalize text-center">
+          <p className="text-[1.6rem] md:text-[2rem] font-semibold capitalize text-center">
             Don&apos;t miss our next event!
           </p>
           <CountDown
@@ -33,7 +35,7 @@ const UpcomingEvts = () => {
           />
           <Link
             to={closestEvts[0].link}
-            className="text-white bg-[#ed5a2f] md:px-12 md:py-4 px-9 py-2 uppercase font-bold"
+            className="text-white bg-[#ed5a2f] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
           >
             join us
           </Link>
@@ -45,12 +47,18 @@ const UpcomingEvts = () => {
             className="upcoming_evt flex flex-col max-w-[1100px] mx-auto  items-center justify-center  border rounded-[2rem] border-[#ffffff29] p-8 md:flex-row md:items-center md:justify-start gap-3 md:gap-[3.2rem]"
             key={evt.name}
           >
+            <div className="md:flex items-center flex-col justify-center hidden md:w-[10%]">
+              <p className="uppercase text-[.9rem] tracking-widest">
+                {evt.dayOfWeek.slice(0, 3)}
+              </p>
+              <p className="text-[4rem]">{evt.day}</p>
+            </div>
             <img
               src={evt.flyer}
               alt="mystery embassy"
-              className="md:max-w-[380px] w-full md:w-[30%]"
+              className="md:max-w-[250px] w-full md:w-[30%] rounded-md"
             />
-            <div className="flex flex-col items-start gap-3 md:items-start md:gap-5">
+            <div className="flex flex-col items-start gap-3 md:items-start md:gap-5 md:w-[60%]">
               <p className="capitalize font-bold text-[1.4rem] md:text-[1.7rem]">
                 {evt.name}
               </p>
@@ -60,13 +68,21 @@ const UpcomingEvts = () => {
                   to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
                 ></Link>
               </p>
-              <p className="uppercase   text-[.9rem] font-200">
-                {evt.month} {evt.day} @ {evt.time}
+              <p className="uppercase   text-[.9rem] font-200 flex items-center gap-2">
+                <span className="text-[var(--second-color)] text-[1.3rem]">
+                  <LuCalendarDays />
+                </span>
+                {evt.day} / {evt.month} / {evt.year}
               </p>
-              <Link
-                // type="button"
+              <p className="uppercase   text-[.9rem] font-200 flex items-center gap-2">
+                {" "}
+                <span className="text-[var(--second-color)] text-[1.3rem]">
+                  <FaRegClock />
+                </span>
+                {evt.time}
+              </p>
 
-                // onClick={() => navigate(`/${evt.name}`)}
+              <Link
                 to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
                 className="uppercase border border-[#ffffff29] font-bold py-4 px-7 text-[.9rem] mx-auto md:mx-[0]"
               >

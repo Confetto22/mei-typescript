@@ -14,6 +14,7 @@ const Picsgrid = () => {
         {gridPics.map((image) => (
           <img
             src={image}
+            key={image}
             alt="mystery embassy international"
             className="aspect-[8/7] md:aspect-[8/7] object-cover object-top"
           />

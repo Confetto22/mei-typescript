@@ -20,7 +20,7 @@ body {
   font-family: var(--second-font);
 }
 .welcome h2 {
-  background: -webkit-linear-gradient(#ed5a2f, #001d3d);
+  background: -webkit-linear-gradient(#ffc300, #ed5a2f);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,12 +75,14 @@ body {
   font-weight: lighter;
   font-size: 0.8rem;
 }
-.evtValue a {
+.evtValue a,
+.div-2 a {
   transition: all 0.3s ease-in;
   text-decoration: underline;
   text-underline-offset: 1px;
 }
-.evtValue a:hover {
+.evtValue a:hover,
+.div-2 a:hover {
   color: var(--second-color);
   text-underline-offset: 6px;
 }
@@ -94,4 +96,10 @@ body {
 }
 .evtContacts div p:last-child {
   border-bottom: none;
+}
+.div-1,
+.div-2,
+.div-3 {
+  max-width: 500px;
+  font-size: 0.9rem;
 }
