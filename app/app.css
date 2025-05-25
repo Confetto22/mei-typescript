@@ -6,7 +6,7 @@
   --main-font: "Ubuntu", sans-serif;
   --main-color: #f8f1e6;
   --second-font: "Unbounded", sans-serif;
-  --second-color: #ed5a2f;
+  --second-color: #001d3d;
   --theme-yellow: #ffc300;
   --dark-blue: #001d3d;
   --light-blue: #003566;
@@ -68,7 +68,7 @@ body {
   gap: 3px;
 }
 .evtKey .icon {
-  color: var(--second-color);
+  color: var(--theme-yellow);
   font-size: 1.2rem;
 }
 .evtValue {
@@ -83,7 +83,7 @@ body {
 }
 .evtValue a:hover,
 .div-2 a:hover {
-  color: var(--second-color);
+  color: #ffc400db;
   text-underline-offset: 6px;
 }
 .evtContacts {
@@ -102,4 +102,8 @@ body {
 .div-3 {
   max-width: 500px;
   font-size: 0.9rem;
+}
+.leader .swiper {
+  width: 100%;
+  height: 100%;
 }

@@ -12,8 +12,8 @@ const closestEvts = allEvents.slice(0, 3);
 const UpcomingEvts = () => {
   //   const navigate = useNavigate();
   return (
-    <section className="py-24 upcoming_evts  flex flex-col gap-16 bg-[var(--dark-blue)] text-stone-200">
-      <div className="upcoming_text px-8 text-center flex flex-col items-center justify-center gap-4 min-h-[40vh]">
+    <section className="py-24 pb-0 upcoming_evts  flex flex-col   text-stone-200">
+      <div className="upcoming_text px-8 text-center flex flex-col items-center justify-center gap-4 min-h-[60vh] bg-[var(--dark-blue)] py-12">
         <h2 className="text-[2.5rem] uppercase font-extrabold md:text-[2.5rem]">
           upcoming events
         </h2>
@@ -31,20 +31,20 @@ const UpcomingEvts = () => {
           <CountDown
             month={closestEvts[0].month}
             day={closestEvts[0].day}
-            year={2025}
+            year={"2025"}
           />
           <Link
             to={closestEvts[0].link}
-            className="text-white bg-[#ed5a2f] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
+            className="text-white bg-[var(--theme-yellow)] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
           >
             join us
           </Link>
         </div>
       </div>
-      <div className="allUpcoming px-8 grid grid-cols-1 gap-7">
+      <div className="allUpcoming px-8 grid grid-cols-1 py-[9rem] gap-7">
         {closestEvts.map((evt) => (
           <div
-            className="upcoming_evt flex flex-col max-w-[1100px] mx-auto  items-center justify-center  border rounded-[2rem] border-[#ffffff29] p-8 md:flex-row md:items-center md:justify-start gap-3 md:gap-[3.2rem]"
+            className="upcoming_evt flex flex-col max-w-[1100px] mx-auto  items-center justify-center  border rounded-[2rem]  p-8 md:flex-row md:items-center md:justify-start gap-3 md:gap-[3.2rem] text-[#242424]  border-[var(--dark-blue)]"
             key={evt.name}
           >
             <div className="md:flex items-center flex-col justify-center hidden md:w-[10%]">
@@ -63,16 +63,20 @@ const UpcomingEvts = () => {
                 {evt.name}
               </p>
               <p className="text-[.9rem] font-[200] max-w-[500px] md:text-left">
-                {evt.desc.slice(0, 80)}...{" "}
+                {evt.desc.slice(0, 120)}...{" "}
                 <Link
                   to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
-                ></Link>
+                  className="text-[#4a4af3] font-[300] underline hover:underline-offset-2 duration-300 hover:opacity-70 capitalize"
+                >
+                  {" "}
+                  read more
+                </Link>
               </p>
               <p className="uppercase   text-[.9rem] font-200 flex items-center gap-2">
                 <span className="text-[var(--second-color)] text-[1.3rem]">
                   <LuCalendarDays />
                 </span>
-                {evt.day} / {evt.month} / {evt.year}
+                {evt.month} {evt.day}, {evt.year}
               </p>
               <p className="uppercase   text-[.9rem] font-200 flex items-center gap-2">
                 {" "}
@@ -84,7 +88,7 @@ const UpcomingEvts = () => {
 
               <Link
                 to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
-                className="uppercase border border-[#ffffff29] font-bold py-4 px-7 text-[.9rem] mx-auto md:mx-[0]"
+                className="uppercase  font-bold py-4 px-7 bg-[var(--theme-yellow)] w-full text-center text-[.9rem] mx-auto md:mx-[0] rounded-md"
               >
                 view details
               </Link>

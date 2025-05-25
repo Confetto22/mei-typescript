@@ -95,7 +95,7 @@ const Footer = () => {
           />
           <button
             type="submit"
-            className="w-[30%] bg-[var(--second-color)] border-none hover:cursor-pointer  text-[.8rem] uppercase min-h-[2.3rem] tracking-wider rounded-r-[2rem] hover:bg-[#ba4521] ease-in-out duration-300"
+            className="w-[30%] bg-[var(--theme-yellow)] border-none hover:cursor-pointer  text-[.8rem] uppercase min-h-[2.3rem] tracking-wider rounded-r-[2rem] hover:bg-[#ffc400c2] ease-in-out duration-300"
           >
             submit
           </button>
@@ -119,7 +119,7 @@ const Footer = () => {
                 to={social.ref}
                 target="_blank"
                 key={social.refName}
-                className="bg-transparent border border-[#a3a2a2] rounded-full text-white flex items-center justify-center hover:text-[var(--second-color)]  ease-in-out duration-200 w-[40px] h-[40px]"
+                className="bg-transparent border border-[#a3a2a2] rounded-full text-white flex items-center justify-center hover:text-[var(--theme-yellow)]  ease-in-out duration-200 w-[40px] h-[40px]"
                 aria-label={`${social.refName} link`}
               >
                 {social.icon}

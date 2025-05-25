@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import "./countdown.css";
 
 type countDownKeys = {
-  month: number;
-  day: number;
-  year: number;
+  month: string; // e.g. "May"
+  day: string; // e.g. "25"
+  year: string; // e.g. "2025"
 };
 
 const CountDown = ({ month, day, year }: countDownKeys) => {
@@ -14,14 +14,14 @@ const CountDown = ({ month, day, year }: countDownKeys) => {
   const [timerHours, setTimerHours] = useState(0);
   const [timerMinutes, setTimerMinutes] = useState(0);
   const [timerSeconds, setTimerSeconds] = useState(0);
-  let interval: NodeJS.Timeout;
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startTimer = () => {
     const countDownDate = new Date(
       `${month} ${day}, ${year} 18:00:00`
     ).getTime();
 
-    interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
 
@@ -33,7 +33,11 @@ const CountDown = ({ month, day, year }: countDownKeys) => {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       if (distance <= 0) {
-        clearInterval(interval);
+        if (intervalRef.current) clearInterval(intervalRef.current);
+        setTimerDays(0);
+        setTimerHours(0);
+        setTimerMinutes(0);
+        setTimerSeconds(0);
       } else {
         setTimerDays(days);
         setTimerHours(hours);
@@ -46,9 +50,9 @@ const CountDown = ({ month, day, year }: countDownKeys) => {
   useEffect(() => {
     startTimer();
     return () => {
-      clearInterval(interval);
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  });
+  }, [month, day, year]);
 
   return (
     <div className="countdouwn_box">

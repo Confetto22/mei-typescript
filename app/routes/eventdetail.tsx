@@ -85,7 +85,7 @@ const eventdetail = ({ params }: Route.LoaderArgs) => {
           <div className="evtContacts max-w-[600px] rounded-2xl bg-[#f2f7f7] px-5 py-9 flex flex-col gap-8">
             <p className="flex flex-col font-bold gap-1 text-[1.3rem]">
               Information{" "}
-              <hr className="max-w-[50px] h-[6px] rounded-xl border-none bg-[var(--second-color)]" />
+              <hr className="max-w-[50px] h-[6px] rounded-xl border-none bg-[var(--theme-yellow)]" />
             </p>
             <div className="infoValues capitalize flex flex-col gap-4">
               <p>
