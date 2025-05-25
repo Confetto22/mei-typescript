@@ -1,7 +1,7 @@
 const HeroCard = () => {
   return (
     <section className="herocard relative h-screen w-full bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')] bg-cover bg-center">
-      <div className="cover min-h-screen bg-[#000000bd] p-6 md:py-16 md:px-8 font-[var(--main-font)] flex flex-col justify-center items-center md:text-left text-center md:items-start gap-6">
+      <div className="cover min-h-screen bg-gradient-to-r from-[#001a36c6] to-[#350d008f] p-6 md:py-16 md:px-8 font-[var(--main-font)] flex flex-col justify-center items-center md:text-left text-center md:items-start gap-6">
         <div className="churchname text-[var(--main-color)] font-bold text-[2.2rem] md:text-[4rem] leading-[2.4rem] md:leading-[4.2rem] uppercase">
           <p>
             <b>m</b>ystery
@@ -25,11 +25,11 @@ const HeroCard = () => {
           </button>
         </div>
       </div>
-      <div className="bg-[var(--theme-green)] px-4 absolute bottom-0 right-0   rounded-tl-[6rem] flex items-center flex-col justify-center text-white gap-1 max-w-[460px] py-5">
-        <span className="text-[var(--theme-green)] bg-white  font-bold px-2 text-[1rem] md:text-[1.3rem]">
+      <div className="bg-[#fff] px-4 absolute bottom-0 right-0   rounded-tl-[6rem] flex items-center flex-col justify-center  gap-1 max-w-[460px] py-5 text-[#242424]">
+        <span className="text-[#fff] bg-[var(--second-color)]  font-bold px-2 text-[1rem] md:text-[1.3rem]">
           07:30 AM
         </span>
-        <p className="text text-[1.7rem] font-extrabold uppercase md:text-[3rem]">
+        <p className="text text-[1.7rem] font-extrabold uppercase md:text-[3rem] text-black">
           Sundays
         </p>
         <p className="capitalize ">join us & be blessed</p>

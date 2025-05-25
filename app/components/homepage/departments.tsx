@@ -75,7 +75,7 @@ const Departments = () => {
         subhead={"Our Staff"}
         mainhead={" Departments"}
         substyle={
-          "text-stone-100 text-[.9rem] md:text-[1.2rem] bg-[var(--dark-blue)]"
+          "text-stone-100 text-[.9rem] md:text-[1.2rem] bg-[var(--second-color)]"
         }
         divstyle={"items-start gap-4"}
       />
@@ -85,10 +85,10 @@ const Departments = () => {
             <button
               key={singleDept.name}
               onClick={() => setDepartment(singleDept.name)}
-              className={` text-white py-[.8rem] rounded-sm cursor-pointer hover:bg-[var(--dark-blue)] duration-300 ease-in-out ${
+              className={` text-white py-[.8rem] rounded-sm cursor-pointer hover:bg-[var(--second-color)] duration-300 ease-in-out ${
                 department === singleDept.name
-                  ? "currentFilterBtn bg-[var(--dark-blue)]"
-                  : "bg-[#4070a3]"
+                  ? "currentFilterBtn bg-[var(--second-color)]"
+                  : "bg-[#f19b81]"
               }`}
             >
               {singleDept.name}

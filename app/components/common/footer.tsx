@@ -95,7 +95,7 @@ const Footer = () => {
           />
           <button
             type="submit"
-            className="w-[30%] bg-[var(--theme-yellow)] border-none hover:cursor-pointer  text-[.8rem] uppercase min-h-[2.3rem] tracking-wider rounded-r-[2rem] hover:bg-[#ffc400c2] ease-in-out duration-300"
+            className="w-[30%] bg-[var(--second-color)] border-none hover:cursor-pointer  text-[.8rem] uppercase min-h-[2.3rem] tracking-wider rounded-r-[2rem] hover:bg-[#954026] ease-in-out duration-300"
           >
             submit
           </button>
@@ -131,7 +131,11 @@ const Footer = () => {
           <p className="text-white text-[1.4rem] uppercase">resources</p>
           <menu className="useful-links flex flex-col items-start md:items-center justify-start w-full gap-3">
             {resourceLinks.map((link) => (
-              <Link to={link.refLink} className="text-stone-300 font-[200]">
+              <Link
+                to={link.refLink}
+                className="text-stone-300 font-[200]"
+                key={link.ref}
+              >
                 {link.ref}
               </Link>
             ))}
@@ -146,6 +150,7 @@ const Footer = () => {
           <menu className="contacts flex flex-col items-start gap-2">
             {contactLinks.map((contact) => (
               <Link
+                key={contact.ref}
                 to={contact.refLink}
                 className="text-stone-300 font-[200] flex items-center gap-3"
               >

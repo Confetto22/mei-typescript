@@ -20,7 +20,7 @@ const WeAre = () => {
         <div className="weare_text flex flex-col items-start gap-6 md:w-[55%]">
           <SecHeading
             substyle={
-              "text-stone-100 text-[.9rem] md:text-[1.2rem] bg-[var(--dark-blue)]"
+              "text-stone-100 text-[.9rem] md:text-[1.2rem] bg-[var(--second-color)]"
             }
             subhead={"who we are"}
             mainhead={"A Christ-Centered Community for Worship & Growth"}
@@ -39,7 +39,7 @@ const WeAre = () => {
           <Button
             text={"about us"}
             style={
-              "uppercase font-semibold bg-[var(--dark-blue)] py-3 px-6 text-stone-100"
+              "uppercase font-semibold bg-[var(--second-color)] py-3 px-6 text-stone-100"
             }
             link={"#"}
           />

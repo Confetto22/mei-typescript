@@ -35,7 +35,7 @@ const UpcomingEvts = () => {
           />
           <Link
             to={closestEvts[0].link}
-            className="text-white bg-[var(--theme-yellow)] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
+            className="text-white bg-[var(--second-color)] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
           >
             join us
           </Link>
@@ -88,7 +88,7 @@ const UpcomingEvts = () => {
 
               <Link
                 to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
-                className="uppercase  font-bold py-4 px-7 bg-[var(--theme-yellow)] w-full text-center text-[.9rem] mx-auto md:mx-[0] rounded-md"
+                className="uppercase  font-bold py-4 px-7 bg-[var(--second-color)] w-full text-center text-[.9rem] text-white mx-auto md:mx-[0] rounded-md"
               >
                 view details
               </Link>
