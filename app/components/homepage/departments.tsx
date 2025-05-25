@@ -67,7 +67,7 @@ const departmentList: departmentProps[] = [
 const Departments = () => {
   const [department, setDepartment] = useState("Choir");
   return (
-    <section className="departments py-16 px-8">
+    <section className="departments py-16 px-8 ">
       <SecHeading
         mainstyle={
           "font-extrabold leading-6 text-[1.3rem] md:text-[1.7rem] md:leading-8"
@@ -79,7 +79,7 @@ const Departments = () => {
         }
         divstyle={"items-start gap-4"}
       />
-      <div className="all_depts flex flex-col  gap-3 max-w-[500px] md:max-w-full mx-auto">
+      <div className="all_depts flex flex-col  gap-3 max-w-[600px] md:max-w-full mx-auto ">
         <div className="filterBtns grid grid-cols-2 md:grid-cols-4 gap-2 mt-4 ">
           {departmentList.map((singleDept) => (
             <button
@@ -100,7 +100,7 @@ const Departments = () => {
           (deptInfo) =>
             department === deptInfo.name && (
               <div
-                className="dept_info md:min-h-[50vh] flex flex-col md:justify-center  gap-3 items-start md:flex-row md:items-center md:gap-5 px-8"
+                className="dept_info md:min-h-[50vh] flex flex-col md:justify-center  gap-3 items-start md:flex-row md:items-center md:gap-5  "
                 key={deptInfo.name}
               >
                 <Swiper

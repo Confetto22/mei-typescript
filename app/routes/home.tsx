@@ -11,6 +11,7 @@ import HeroCard from "~/components/homepage/herocard";
 import UpcomingEvts from "~/components/homepage/upcomingevts";
 import WeAre from "~/components/homepage/weare";
 import Departments from "~/components/homepage/departments";
+import Sermons from "~/components/homepage/Sermons";
 
 const daddyPics: string[] = [
   "https://res.cloudinary.com/dv9aqxptd/image/upload/v1722537867/homchapel/DADDYEXCLUSIVE3_i3gk7d.jpg",
@@ -106,6 +107,7 @@ export default function Home() {
         </div>
       </section>
       <Departments />
+      <Sermons />
     </section>
   );
 }
