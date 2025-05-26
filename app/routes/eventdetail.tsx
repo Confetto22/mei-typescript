@@ -40,7 +40,7 @@ const correctUrl = allEvents.map((evt) => {
 //   singleUrl.replaceAll("-", " ").toUpperCase()
 // );
 
-const eventdetail = ({ params }: Route.LoaderArgs) => {
+const Eventdetail = ({ params }: Route.LoaderArgs) => {
   const formattedUrl = params.dynamicEvent?.replaceAll("-", " ");
   // console.log(formattedUrl);
 
@@ -155,4 +155,4 @@ const eventdetail = ({ params }: Route.LoaderArgs) => {
   );
 };
 
-export default eventdetail;
+export default Eventdetail;

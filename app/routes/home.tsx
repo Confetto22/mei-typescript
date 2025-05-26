@@ -12,6 +12,7 @@ import UpcomingEvts from "~/components/homepage/upcomingevts";
 import WeAre from "~/components/homepage/weare";
 import Departments from "~/components/homepage/departments";
 import Sermons from "~/components/homepage/Sermons";
+import Testimonials from "~/components/common/Testimonials";
 
 const daddyPics: string[] = [
   "https://res.cloudinary.com/dv9aqxptd/image/upload/v1722537867/homchapel/DADDYEXCLUSIVE3_i3gk7d.jpg",
@@ -22,7 +23,7 @@ const daddyPics: string[] = [
 
 export default function Home() {
   return (
-    <section className="homepage relative">
+    <main className="homepage relative">
       <HeroCard />
       <section className="welcome gap-7 bg-[var(--dark-blue)] min-h-[70vh] flex flex-col items-center justify-center text-center p-6">
         <h2 className="font-extrabold uppercase md:text-[2.5rem] md:leading-11 max-w-[600px] text-[1.7rem] leading-9">
@@ -108,6 +109,7 @@ export default function Home() {
       </section>
       <Departments />
       <Sermons />
-    </section>
+      <Testimonials />
+    </main>
   );
 }

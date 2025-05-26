@@ -41,7 +41,7 @@ const WeAre = () => {
             style={
               "uppercase font-semibold bg-[var(--second-color)] py-3 px-6 text-stone-100"
             }
-            link={"#"}
+            link={"/about"}
           />
         </div>
         <div className="imgBox overflow-hidden rounded-lg mt-4 md:w-[50%]">

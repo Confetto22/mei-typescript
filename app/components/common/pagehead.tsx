@@ -1,42 +1,48 @@
 import { Link } from "react-router";
+import { BiChevronRight } from "react-icons/bi";
 
-type pageHeadProps = {
-  pageName: any;
-  prevPage: string;
-  currentPage: any;
-  refLink?: string;
-
-  bgPic: string;
-  //   pageIntro: string;
+type pageHeadTypes = {
+  bgPic?: string;
+  prevPage?: string;
+  currPage?: string;
+  prevLink?: string;
 };
 
-const PageHead = ({
-  pageName,
-  prevPage,
-  currentPage,
-  refLink,
-  bgPic,
-}: //   pageIntro,
-pageHeadProps) => {
+const PageHead = ({ bgPic, prevPage, currPage, prevLink }: pageHeadTypes) => {
   return (
-    <div className={`page_head min-h-[45vh] ${bgPic} bg-cover bg-center`}>
-      <div className="cover bg-[#000000b0] w-full h-full flex flex-col items-center justify-center px-8 md:py-24 py-16 gap-0 min-h-[45vh]">
-        <h2 className="page_name text-white text-[1.5rem] md:text-[3rem] capitalize">
-          {pageName}
-        </h2>
-        <p className="page_tracker tracking-wide text-[1.5rem] md:text-[3.2rem] capitalize text-[var(--main-color)]">
-          <Link
-            to={refLink}
-            className=" hover:text-[var(--theme-yellow)] text-[1.2rem] ease-in-out duration-300 font-semibold text-[var(--second-color)]"
-          >
-            {prevPage}
-          </Link>
-          <span className="text-[.8rrem]">{" > "}</span>
-          {currentPage}
-        </p>
-        {/* <p className="text-gray-400 max-w-[450px] md:max-w-[600px] text-center text-sm md:text-base">
-          {pageIntro}
-        </p> */}
+    <div className={`pagehead ${bgPic}  bg-cover bg-center `}>
+      <div className="cover min-h-[60vh] flex items-center justify-center bg-[#000000ca]">
+        <Link
+          to={prevLink}
+          className="text-[var(--second-color)] underline underline-offset-2 text-[1.2rem] hover:opacity-60 hover:underline-offset-4 ease-in-out duration-300 font-[500]"
+        >
+          {prevPage}
+        </Link>
+        <span>
+          <BiChevronRight className="text-[#a8a8a8dc] text-[1.2rem] inline-block mx-2" />
+        </span>
+
+        <p className="text-[#fff] text-[1.2rem] font-[200]">{currPage}</p>
+        {/* <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink>
+                <Link
+                  to={"/"}
+                  className="text-[var(--second-color)] underline underline-offset-2 text-[1.2rem] hover:opacity-60 hover:underline-offset-4 ease-in-out duration-300 font-[500]"
+                >
+                  {prevPage}
+                </Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbPage className="text-[#fff] text-[1.2rem] font-[200]">
+                {currPage}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb> */}
       </div>
     </div>
   );

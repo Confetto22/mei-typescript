@@ -27,4 +27,18 @@ export const allSermons = [
     link: "https://www.youtube.com/embed/tHV8ZQQorbs?si=CLg9d3AEslXDR8gl",
     title: "the power of ideas",
   },
+  {
+    name: "Sermon 4",
+    coverPic:
+      "bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1739227932/homchapel/DSC_0824_h6nejc.webp')]",
+    link: "https://www.youtube.com/embed/tHV8ZQQorbs?si=CLg9d3AEslXDR8gl",
+    title: "the power of ideas",
+  },
+  {
+    name: "Sermon 4",
+    coverPic:
+      "bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1739227932/homchapel/DSC_0824_h6nejc.webp')]",
+    link: "https://www.youtube.com/embed/tHV8ZQQorbs?si=CLg9d3AEslXDR8gl",
+    title: "the power of ideas",
+  },
 ];

@@ -13,7 +13,7 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <nav className="navbar z-10 bg-transparent py-2 px-9 flex items-center justify-between absolute top-0 w-full">
+    <nav className="navbar z-10 bg-transparent py-1 px-2 flex items-center justify-between absolute top-0 w-full">
       <Link to={"/"}>
         <img
           src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458633/homchapel/IMG-20250415-WA0017-removebg-preview_dg6k6e.webp"
@@ -30,7 +30,7 @@ const Navbar = () => {
       </menu>
       <Link
         to={"#"}
-        className="bg-[var(--second-color)] text-white py-3 px-9 uppercase font-bold"
+        className="bg-[var(--second-color)] text-[.9rem] text-white py-[.6rem] px-[1.5rem] uppercase font-bold"
       >
         Give
       </Link>
