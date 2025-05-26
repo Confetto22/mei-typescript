@@ -13,7 +13,7 @@ const PageHead = ({ bgPic, prevPage, currPage, prevLink }: pageHeadTypes) => {
     <div className={`pagehead ${bgPic}  bg-cover bg-center `}>
       <div className="cover min-h-[60vh] flex items-center justify-center bg-[#000000ca]">
         <Link
-          to={prevLink}
+          to={prevLink ?? "/"}
           className="text-[var(--second-color)] underline underline-offset-2 text-[1.2rem] hover:opacity-60 hover:underline-offset-4 ease-in-out duration-300 font-[500]"
         >
           {prevPage}
