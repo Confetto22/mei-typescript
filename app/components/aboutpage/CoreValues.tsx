@@ -48,7 +48,7 @@ const faqValues: faqTypes[] = [
   },
 ];
 
-const CoreValues = (props: faqTypes[]) => {
+const CoreValues = () => {
   return (
     <section className="core-values px-6 pb-16">
       <div className="flex flex-col gap-4 items-center text-center">
