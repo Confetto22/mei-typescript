@@ -223,3 +223,16 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.success-cover p {
+  max-width: 850px;
+}
+.accordions a {
+  text-decoration: underline;
+  color: #6c6cff;
+  /* text-underline-offset: 0.1rem; */
+  transition: all 0.3s ease-in-out;
+}
+.accordions a:hover {
+  color: #3c3cff;
+  /* text-underline-offset: 0.2rem; */
+}
