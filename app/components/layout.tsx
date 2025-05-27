@@ -3,6 +3,7 @@ import Navbar from "./common/navbar";
 import Picsgrid from "./common/picsgrid";
 import Footer from "./common/footer";
 import BibleVerse from "./common/BibleVerse";
+import Widget from "./common/Widget";
 
 const layout = () => {
   return (
@@ -10,7 +11,7 @@ const layout = () => {
       <Navbar />
 
       <Outlet />
-      {/* <BibleVerse /> */}
+      <Widget />
       <Picsgrid />
       <Footer />
     </>

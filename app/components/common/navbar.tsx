@@ -85,13 +85,13 @@ const Navbar = () => {
                       <div className="md:pl-[2rem] min-h-[6rem] flex flex-col items-center justify-center gap-3">
                         <FaRegMessage className="text-[2.7rem]" />
                         <Link
-                          to={"#"}
+                          to={"tel:*800*80*547#"}
                           className="hover:bg-[var(--second-color)] hover:text-white uppercase px-6 py-3 bg-transparent border border-[var(--second-color)] text-[var(--second-color)] ease-in-out duration-300 flex items-center"
                         >
-                          USSD shortcode
+                          USSD
                         </Link>
                         <p className="font-[300]">
-                          Securely donate with a card or bank transfer.
+                          Securely donate with our USSD shortcode
                         </p>
                       </div>
                     </div>

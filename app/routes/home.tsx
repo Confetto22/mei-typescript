@@ -130,6 +130,7 @@ export default function Home() {
           plan visit
         </Link>
       </section>
+      {/* <Widget /> */}
       {/* <Picsgrid /> */}
     </main>
   );

@@ -304,3 +304,29 @@ body {
 .new_here .activity {
   box-shadow: 0px 0px 6px 1px black;
 }
+
+.whatsapp_widget {
+  color: #fff;
+  padding: 0.7rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #00bd07;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  box-shadow: 2px 2px 8px 1px black;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.whatsapp_widget:hover {
+  background-color: #fff;
+  color: #00bd07;
+  cursor: pointer;
+}
