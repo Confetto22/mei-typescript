@@ -56,12 +56,12 @@ const Navbar = () => {
           <DialogContent className="md:min-w-[90vw] min-w-[80vw] max-w-[90vw] md:min-h-[85vh] ">
             <DialogDescription>
               <section className="join-us md:flex md:flex-row-reverse md:justify-between  text-black ">
-                <div className=" md:w-[60%] px-9">
-                  <div className="cover md:h-full  min-h-[60vh] flex flex-col gap-6 items-center justify-center text-center md:min-h-[80vh]">
-                    <h2 className=" text-[1.5rem] md:text-[2rem] font-[500] uppercase">
+                <div className=" md:w-[60%] md:px-9">
+                  <div className="cover md:h-full  min-h-[60vh] flex flex-col gap-3 items-center justify-center text-center md:min-h-[80vh]">
+                    <h2 className=" text-[1.3rem] md:text-[2rem] font-[500] uppercase">
                       Support Our Mission
                     </h2>
-                    <p className="text-[.9rem] font-[200] leading-[1.7rem]">
+                    <p className="text-[.8rem] font-[200] md:leading-[1.7rem]">
                       Your generosity makes a difference! Every gift helps us
                       spread hope, serve our community, and share God's love
                       with those in need. Thank you for being a part of this
@@ -69,7 +69,7 @@ const Navbar = () => {
                     </p>
 
                     <p className="uppercase font-[500]">ways to give:</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2  gap-y-[2rem]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[.8rem]  md:gap-y-[2rem]">
                       <div className="md:border-r border-r-[#c5c5c578] md:pr-[2rem] min-h-[6rem] flex flex-col items-center justify-center gap-3">
                         <IoIosPhonePortrait className="text-[3.4rem]" />
                         <Link
