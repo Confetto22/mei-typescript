@@ -13,6 +13,8 @@ import WeAre from "~/components/homepage/weare";
 import Departments from "~/components/homepage/departments";
 import Sermons from "~/components/homepage/Sermons";
 import Testimonials from "~/components/common/Testimonials";
+import BibleVerse from "~/components/common/BibleVerse";
+import { Link } from "react-router";
 
 const daddyPics: string[] = [
   "https://res.cloudinary.com/dv9aqxptd/image/upload/v1722537867/homchapel/DADDYEXCLUSIVE3_i3gk7d.jpg",
@@ -110,6 +112,25 @@ export default function Home() {
       <Departments />
       <Sermons />
       <Testimonials />
+      <BibleVerse />
+      <section className="planvisit min-h-[60vh] flex flex-col items-center justify-center gap-4 text-center p-6">
+        <h2 className="text-[1.8rem] md:text-[2.5rem] font-extrabold uppercase">
+          Plan Your Visit
+        </h2>
+        <p className="text-[1rem] md:max-w-[600px]">
+          We are excited to welcome you to our church! Whether you are new to
+          the area or looking for a place to call home, we invite you to join us
+          for worship and fellowship. Our doors are open, and we can&apos;t wait
+          to meet you!
+        </p>
+        <Link
+          to={"/contact"}
+          className="uppercase bg-[var(--second-color)] text-white px-4 py-2 border border-[var(--second-color)] hover:bg-transparent hover:text-[var(--second-color)] transition-colors duration-300 font-semibold text-[1rem] md:text-[1.2rem] flex items-center justify-center mt-4"
+        >
+          plan visit
+        </Link>
+      </section>
+      {/* <Picsgrid /> */}
     </main>
   );
 }

@@ -11,10 +11,6 @@ const Sermons = (props: Props) => {
   const [currentLink, setCurrentLink] = useState<string>(allSermons[0].link);
   const currentSermon = allSermons.find((vid) => vid.name === activeVideo);
 
-  activeVideo === currentSermon?.name
-    ? console.log("true")
-    : console.log("false");
-
   return (
     <section className="sermons min-h-[90vh] bg-[var(--dark-blue)] px-6 py-24 flex flex-col items-center gap-[1.2rem]">
       <h2 className="text-white uppercase bg-[var(--second-color)] px-3 text-[1.2rem] md:text-[1.5rem] font-[400]">
@@ -70,7 +66,8 @@ const Sermons = (props: Props) => {
         </div>
       </div>
       <Link
-        to={"#"}
+        to={"https://www.youtube.com/@mysteryembassy"}
+        target="_blank"
         className="watch-more text-white px-5 py-3 border-2 border-white bg-[#ffffff25] cursor-pointer ease-in-out duration-300 hover:bg-[#ffffff4b]"
       >
         watch more

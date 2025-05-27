@@ -6,7 +6,7 @@ type eventValues = {
   month: string;
   year: string;
   time: string;
-  link: string;
+  // link: string;
   dayOfWeek: string;
 };
 
@@ -21,7 +21,28 @@ export const allEvents: eventValues[] = [
     month: "November",
     year: "2025",
     time: "7:00 - 10:45 AM",
-    link: "#",
+  },
+  {
+    name: "Restoration Hour",
+    flyer:
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748160747/agro-ally/restoration-hour_jx7nej.jpg",
+    desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting ",
+    dayOfWeek: "Tuesday",
+    day: "2",
+    month: "November",
+    year: "2025",
+    time: "7:00 - 10:45 AM",
+  },
+  {
+    name: "You can win",
+    flyer:
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748307262/homchapel/you_can_win_wwcnpd.jpg",
+    desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting ",
+    dayOfWeek: "Tuesday",
+    day: "2",
+    month: "November",
+    year: "2025",
+    time: "7:00 - 10:45 AM",
   },
   // {
   //   name: "Grace Without Limits",

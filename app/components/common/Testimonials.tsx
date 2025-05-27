@@ -108,13 +108,17 @@ const Testimonials = (props: Props) => {
           </p>
           <div className="testimonial-btns flex items-center gap-5 md:gap-15 uppercase text-[.9rem]">
             <Link
-              to={"#"}
+              to={
+                "https://www.google.com/search?hl=en-GH&gl=gh&q=Mystery+Embassy+International,+Tatop,+Top+of+Zulu+Gardens,+Accra&ludocid=2922031846309491275&lsig=AB86z5WKW-gpd3RAgFxRcgE7x6YF&mat=Cc8nPj9rUjyEElcBYJahaXfysOUC2H8kpreY4HHn4VK2eJmp1Ix_jSONkmO8uKw5thOfNb193gIfeJbfomJXanWIRw9yJs0ox4wYaiXAlXGMQAgLWslIBeMm49-3Aa3nYDg#lrd=0xfdfbdf3d2cd56d5:0x288d247b8da7f24b,1"
+              }
+              target="_blank"
               className="bg-[var(--second-color)] px-5 py-3 rounded-[.1rem] text-white border-2 border-[var(--second-color)] hover:bg-transparent hover:text-[var(--second-color)] transition-all duration-300"
             >
               view all
             </Link>
             <Link
-              to={"#"}
+              to={"https://g.page/r/CUvyp417JI0oEBM/review"}
+              target="_blank"
               className=" px-5 py-3 rounded-[.1rem] border-2 border-[var(--second-color)] text-[var(--second-color)] hover:bg-[var(--second-color)] hover:text-white transition-all duration-300"
             >
               share yours

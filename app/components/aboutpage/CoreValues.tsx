@@ -50,7 +50,7 @@ const faqValues: faqTypes[] = [
 
 const CoreValues = () => {
   return (
-    <section className="core-values px-6 pb-16">
+    <section className="core-values px-6 pb-12 pt-20">
       <div className="flex flex-col gap-4 items-center text-center">
         <h2 className="text-[1.8rem] md:text-[2.6rem] uppercase font-[600]">
           Our Core Values

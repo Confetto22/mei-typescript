@@ -111,16 +111,22 @@ body {
   font-size: 0.8rem;
 }
 .evtValue a,
-.div-2 a {
+.div-2 a,
+.single-event a {
   transition: all 0.3s ease-in;
   text-decoration: underline;
   text-underline-offset: 1px;
 }
 .evtValue a:hover,
-.div-2 a:hover {
+.div-2 a:hover,
+.single-event a:hover {
   color: var(--second-color);
   text-underline-offset: 6px;
 }
+.event-text a {
+  text-decoration: none;
+}
+
 .evtContacts {
   box-shadow: 0 4px 8px 0 rgba(197, 197, 197, 0.164),
     0 6px 20px 0 rgba(172, 172, 172, 0.218);

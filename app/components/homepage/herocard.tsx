@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const HeroCard = () => {
   return (
     <section className="herocard relative h-screen w-full bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')] bg-cover bg-center">
@@ -17,12 +19,19 @@ const HeroCard = () => {
           bridging the gap between divinity & humanity
         </p>
         <div className="heroBtns flex flex-col items-center md:items-start gap-5 text-white">
-          <button className="bg-[var(--second-color)] py-4 px-5 uppercase font-bold text-[.8rem]">
+          <Link
+            to={"/contact"}
+            className="bg-[var(--second-color)] py-4 px-5 uppercase font-bold text-[.8rem] hover:opacity-70 ease-in-out duration-300"
+          >
             join us this sunday
-          </button>
-          <button className="text-[var(--text-color)] bg-white py-3 px-5 font-bold uppercase text-[.8rem]">
+          </Link>
+          <Link
+            to={"https://www.facebook.com/mysteryembassy"}
+            target="_blank"
+            className="text-[var(--text-color)] bg-white py-3 px-5 font-bold uppercase text-[.8rem] hover:opacity-70 ease-in-out duration-300"
+          >
             watch live
-          </button>
+          </Link>
         </div>
       </div>
       <div className="bg-[#fff] px-4 absolute bottom-0 right-0   rounded-tl-[6rem] flex items-center flex-col justify-center  gap-1 max-w-[460px] py-5 text-[#242424]">

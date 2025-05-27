@@ -5,6 +5,8 @@ import PageHead from "~/components/common/pagehead";
 import { IoMdPlayCircle } from "react-icons/io";
 import { useState } from "react";
 import CoreValues from "~/components/aboutpage/CoreValues";
+import JoinUs from "~/components/common/JoinUs";
+import Vision from "~/components/aboutpage/Vision";
 
 type Props = {};
 
@@ -21,7 +23,7 @@ const About = (props: Props) => {
       <div className="px-6 py-24 flex flex-col md:flex-row-reverse md:justify-center md:items-center gap-8">
         <div className="intro-text flex flex-col gap-3 md:w-[50%] md:max-w-[600px]">
           <h2 className="uppercase font-[500] text-[1.3rem] md:text-[1.7rem]">
-            a diverse and inclusive community
+            welcome to <b>mystery embassy international</b>
           </h2>
           <p>
             Our curriculum appeals to student diversity and interest, and is
@@ -47,9 +49,10 @@ const About = (props: Props) => {
           />
         </div>
       </div>
+      {/* <Vision /> */}
       <Success />
-      <section className="visit-sermons flex flex-col gap-8 py-24">
-        <div className="flex flex-col gap-4 items-center text-center px-7 justify-center py-5 pb-14 min-h-[50vh]">
+      <section className="visit-sermons flex flex-col gap-8 pt-24">
+        <div className="flex flex-col gap-4 items-center text-center px-7 justify-center py-5  min-h-[40vh]">
           <p className="bg-[var(--second-color)] px-1 tracking-wider md:text-[1.2rem] text-white uppercase font-[300]">
             beliefs that unite us
           </p>
@@ -63,7 +66,7 @@ const About = (props: Props) => {
           </p>
         </div>
         <div className="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054653/homchapel/DSC_0394_uoverd.webp')] bg-center bg-cover ">
-          <Link to={"#"}>
+          <Link to={"https://www.youtube.com/@mysteryembassy"} target="_blank">
             <div
               className={`cover  min-h-[60vh] md:min-h-[80vh] flex items-center justify-center cursor-pointer ease-in duration-500 ${
                 hovered ? "bg-[#000000bd]" : "bg-[#00000065]"
@@ -82,6 +85,12 @@ const About = (props: Props) => {
         </div>
       </section>
       <CoreValues />
+      <JoinUs />
+      <img
+        src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458654/homchapel/c_m4n5ge.webp"
+        alt="mystery embassy international"
+        className="w-full object-contain lg:max-w-[900px] lg:mx-auto lg:h-screen  "
+      />
     </section>
   );
 };

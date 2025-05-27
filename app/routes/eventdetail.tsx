@@ -99,7 +99,7 @@ const Eventdetail = ({ params }: Route.LoaderArgs) => {
                   <LuCalendarDays className="icon" /> date :
                 </span>{" "}
                 <span className="evtValue">
-                  {`${singleEvt[0].day}/${singleEvt[0].month}/${singleEvt[0].year}`}{" "}
+                  {`${singleEvt[0].month} ${singleEvt[0].day}, ${singleEvt[0].year}`}{" "}
                 </span>
               </p>
               <p>

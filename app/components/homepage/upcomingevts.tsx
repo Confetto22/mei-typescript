@@ -7,22 +7,12 @@ import { FaRegClock } from "react-icons/fa6";
 import { LuCalendarDays } from "react-icons/lu";
 // import CountDown from "./common/countdown/CountDown";
 
-const closestEvts = allEvents.slice(0, 3);
+const closestEvts = allEvents.slice(0, 2);
 
 const UpcomingEvts = () => {
   //   const navigate = useNavigate();
   return (
-    <section className="py-24 pb-0 upcoming_evts  flex flex-col   text-stone-200">
-      <div className="upcoming_text px-8 text-center flex flex-col items-center justify-center gap-4 min-h-[60vh] bg-[var(--dark-blue)] py-12">
-        <h2 className="text-[2.5rem] uppercase font-extrabold md:text-[2.5rem]">
-          upcoming events
-        </h2>
-        <p className="max-w-[720px] md:text-[1.2rem]">
-          Stay connected with what&apos;s happening at Community Church! From
-          worship nights and Bible studies to outreach programs and fellowship
-          gatherings, there&apos;s always something for everyone.
-        </p>
-      </div>
+    <section className="py-24 upcoming_evts  flex flex-col   text-stone-200">
       <div className="dont_miss text-[#fbf0e0]  bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1745707493/homchapel/58-home-5_ohzm9x.webp')] bg-cover bg-center">
         <div className="cover bg-[#0000008e] flex flex-col items-center justify-center min-h-[45vh] md:gap-16 md:min-h-[80vh] gap-6 p-8">
           <p className="text-[1.6rem] md:text-[2rem] font-semibold capitalize text-center">
@@ -34,14 +24,24 @@ const UpcomingEvts = () => {
             year={"2025"}
           />
           <Link
-            to={closestEvts[0].link}
+            to={"/about"}
             className="text-white bg-[var(--second-color)] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
           >
             join us
           </Link>
         </div>
       </div>
-      <div className="allUpcoming px-8 grid grid-cols-1 py-[9rem] gap-7">
+      <div className="upcoming_text px-8 text-center flex flex-col items-center justify-center gap-4 min-h-[60vh] bg-[var(--dark-blue)] py-12">
+        <h2 className="text-[2.5rem] uppercase font-extrabold md:text-[2.5rem]">
+          upcoming events
+        </h2>
+        <p className="max-w-[720px] md:text-[1.2rem]">
+          Stay connected with what&apos;s happening at Community Church! From
+          worship nights and Bible studies to outreach programs and fellowship
+          gatherings, there&apos;s always something for everyone.
+        </p>
+      </div>
+      <div className="allUpcoming px-8 grid grid-cols-1 py-[6rem] gap-7">
         {closestEvts.map((evt) => (
           <div
             className="upcoming_evt flex flex-col max-w-[1100px] mx-auto  items-center justify-center  border rounded-[2rem]  p-8 md:flex-row md:items-center md:justify-start gap-3 md:gap-[3.2rem] text-[#242424]  border-[var(--dark-blue)]"
@@ -96,6 +96,12 @@ const UpcomingEvts = () => {
           </div>
         ))}
       </div>
+      <Link
+        to={"/events"}
+        className="text-center text-[.9rem] font-bold uppercase py-4 px-7 bg-[var(--second-color)]  mx-auto hover:opacity-80 duration-300 text-white "
+      >
+        view all events
+      </Link>
     </section>
   );
 };

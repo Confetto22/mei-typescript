@@ -9,6 +9,15 @@ export default [
   layout("./components/layout.tsx", [
     index("routes/home.tsx"),
     route("/about", "./routes/about.tsx"),
-    route("/:dynamicEvent", "./routes/eventdetail.tsx"),
+    // route("/events/:dynamicEvent", "./routes/eventdetail.tsx"),
+    // route("/:dynamicEvent", "./routes/eventdetail.tsx"),
+    route("/events/:dynamicEvent", "./routes/eventdetail.tsx", {
+      id: "events-dynamicEvent",
+    }),
+    route("/:dynamicEvent", "./routes/eventdetail.tsx", {
+      id: "root-dynamicEvent",
+    }),
+    route("/events", "./routes/events.tsx"),
+    route("/contact", "./routes/contact.tsx"),
   ]),
 ] satisfies RouteConfig;
