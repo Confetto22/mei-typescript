@@ -69,7 +69,7 @@ const Navbar = () => {
                     </p>
 
                     <p className="uppercase font-[500]">ways to give:</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2  ">
+                    <div className="grid grid-cols-1 md:grid-cols-2  gap-y-[2rem]">
                       <div className="md:border-r border-r-[#c5c5c578] md:pr-[2rem] min-h-[6rem] flex flex-col items-center justify-center gap-3">
                         <IoIosPhonePortrait className="text-[3.4rem]" />
                         <Link
