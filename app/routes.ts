@@ -19,5 +19,6 @@ export default [
     }),
     route("/events", "./routes/events.tsx"),
     route("/contact", "./routes/contact.tsx"),
+    route("/new-here", "./routes/newhere.tsx"),
   ]),
 ] satisfies RouteConfig;

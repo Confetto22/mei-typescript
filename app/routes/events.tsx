@@ -3,20 +3,6 @@ import PageHead from "~/components/common/pagehead";
 import { MdArrowOutward } from "react-icons/md";
 import { allEvents } from "~/components/common/events";
 
-// const allEvents = [
-//     {
-//         id: 1,
-//         title: "Restoration Hour",
-//         date: "November 2, 2025",
-//         time: "10:00 AM",
-//         description: "Join us for a time of restoration and healing.",
-//         flyerUrl:
-//             "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748160747/agro-ally/restoration-hour_jx7nej.jpg",
-//         icon:'',
-//     },
-//     // Add more events as needed
-// ]
-
 const Events = () => {
   return (
     <section className="events page">
@@ -26,18 +12,21 @@ const Events = () => {
         currPage="Events"
         prevLink="/"
       />
+      <h2 className="text-center text-[1.5rem] md:text-[2.3rem] font-bold mt-24">
+        Upcoming Events
+      </h2>
       <div className="all-events px-7 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[2rem]">
         {allEvents.map((evt) => (
           <div
             key={evt.name}
-            className="single-event max-w-[400px] border border-black p-4 flex flex-col items-start justify-between gap-5"
+            className="single-event max-w-[400px] border border-black rounded-sm p-4 flex flex-col items-start justify-between gap-5 mx-auto"
           >
-            <div className="flyerBox overflow-hidden ">
+            <div className="flyerBox overflow-hidden rounded-sm">
               <Link to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}>
                 <img
                   src={evt.flyer}
                   alt="mystery embassy international"
-                  className="flyer hover:scale-110 ease-in duration-500"
+                  className="flyer hover:scale-110 ease-in duration-500 rounded-sm"
                 />
               </Link>
             </div>

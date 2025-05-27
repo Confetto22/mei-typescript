@@ -1,5 +1,6 @@
-import { Accordion } from "@radix-ui/react-accordion";
+// import { Accordion } from "@radix-ui/react-accordion";
 import {
+  Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
