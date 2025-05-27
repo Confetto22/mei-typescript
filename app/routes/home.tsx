@@ -25,7 +25,7 @@ const daddyPics: string[] = [
 
 export default function Home() {
   return (
-    <main className="homepage relative">
+    <main className="homepage relative overflow-x-hidden">
       <HeroCard />
       <section className="welcome gap-7 bg-[var(--dark-blue)] min-h-[70vh] flex flex-col items-center justify-center text-center p-6">
         <h2 className="font-extrabold uppercase md:text-[2.5rem] md:leading-11 max-w-[600px] text-[1.7rem] leading-9">
@@ -38,6 +38,12 @@ export default function Home() {
           a church to call home, we invite you to join us and experience the
           love and fellowship of our congregation.
         </p>
+        <Link
+          to={"/new-here"}
+          className="uppercase bg-[var(--second-color)] text-white px-4 py-2 border border-[var(--second-color)] hover:bg-white hover:text-[var(--second-color)] transition-colors duration-300 font-semibold text-[1rem] md:text-[1.2rem] flex items-center justify-center mt-4"
+        >
+          New Here?
+        </Link>
       </section>
       <WeAre />
       <UpcomingEvts />

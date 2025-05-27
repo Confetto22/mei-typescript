@@ -10,6 +10,17 @@ import {
 } from "../ui/dialog";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { FaRegMessage } from "react-icons/fa6";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
+import { IoMenu } from "react-icons/io5";
 
 const navLinks = [
   {
@@ -20,37 +31,52 @@ const navLinks = [
     ref: "About",
     refLink: "/about",
   },
+  {
+    ref: "Contact",
+    refLink: "/contact",
+  },
+  {
+    ref: "Events",
+    refLink: "/events",
+  },
+  {
+    ref: "New Here?",
+    refLink: "/new-here",
+  },
 ];
+
+const topMenuLinks = navLinks.slice(0, 4);
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar z-10 bg-transparent py-1 px-2 flex items-center justify-between absolute top-0 w-full">
+      <nav className="navbar z-10 bg-transparent fixed py-3 px-4 md:px-8 flex items-center justify-between  top-0 w-full bg-gradient-to-r from-[#521401] to-[#001933]">
         <Link to={"/"}>
           <img
-            src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458633/homchapel/IMG-20250415-WA0017-removebg-preview_dg6k6e.webp"
+            src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458898/homchapel/cropped_logo_ccdry3.png"
             alt="mystery embassy international"
-            className="logo max-w-[130px]"
+            className="logo max-w-[80px] "
           />
         </Link>
         <menu className=" items-center gap-5 hidden md:flex">
-          {navLinks.map(({ ref, refLink }) => (
+          {topMenuLinks.map(({ ref, refLink }) => (
             <Link to={refLink} key={ref} className="text-white">
               {ref}
             </Link>
           ))}
         </menu>
-        {/* <Link
-          to={"#"}
-          className="bg-[var(--second-color)] text-[.9rem] text-white py-[.6rem] px-[1.5rem] uppercase font-bold"
-        >
-          Give
-        </Link> */}
 
         <Dialog>
-          <DialogTrigger asChild>
-            <button className="bg-[var(--second-color)] text-[.9rem] text-white py-[.6rem] px-[1.5rem] uppercase font-bold cursor-pointer">
-              Give
+          <DialogTrigger asChild className="">
+            <button
+              type="button"
+              className=" bg-[var(--theme-yellow)] p-3 max-w-[60px] rounded-full cursor-pointer hover:bg-[#ab8300] ease-in duration-300"
+            >
+              <img
+                src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748369654/homchapel/money_1_u8oyip.png"
+                alt="give button"
+                className=""
+              />
             </button>
           </DialogTrigger>
           <DialogContent className="md:min-w-[90vw] min-w-[80vw] max-w-[90vw] md:min-h-[85vh] ">
@@ -112,6 +138,47 @@ const Navbar = () => {
             </DialogFooter> */}
           </DialogContent>
         </Dialog>
+
+        <Sheet>
+          <SheetTrigger asChild>
+            <button
+              type="button"
+              className="md:hidden text-white text-[2.4rem] cursor-pointer hover:opacity-80 ease-in duration-300"
+            >
+              <IoMenu />
+            </button>
+            {/* <Button variant="outline">Open</Button> */}
+          </SheetTrigger>
+          <SheetContent className="">
+            <SheetHeader>
+              <SheetTitle className="text-[1.2rem]">
+                Mystery Embassy International
+              </SheetTitle>
+              <SheetDescription className="">
+                <ul className="menuItems  flex flex-col h-[70vh] gap-5 items-start pt-5">
+                  {navLinks.map((link) => (
+                    <SheetClose asChild>
+                      <Link
+                        to={link.refLink}
+                        className="text-[#3c3c3c] hover:text-[var(--second-color)] ease-in duration-300 text-[1.2rem]"
+                      >
+                        {link.ref}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </ul>
+              </SheetDescription>
+            </SheetHeader>
+            <div className="grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4"></div>
+            </div>
+            <SheetFooter>
+              {/* <SheetClose asChild>
+                <button type="button">Save changes</button>
+              </SheetClose> */}
+            </SheetFooter>
+          </SheetContent>
+        </Sheet>
       </nav>
     </>
   );
