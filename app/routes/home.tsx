@@ -15,6 +15,8 @@ import Sermons from "~/components/homepage/Sermons";
 import Testimonials from "~/components/common/Testimonials";
 import BibleVerse from "~/components/common/BibleVerse";
 import { Link } from "react-router";
+import { BackgroundBeamsWithCollision } from "components/ui/background-beams-with-collision";
+import { motion } from "motion/react";
 
 const daddyPics: string[] = [
   "https://res.cloudinary.com/dv9aqxptd/image/upload/v1722537867/homchapel/DADDYEXCLUSIVE3_i3gk7d.jpg",
@@ -27,7 +29,8 @@ export default function Home() {
   return (
     <main className="homepage relative overflow-x-hidden">
       <HeroCard />
-      <section className="welcome gap-7 bg-[var(--dark-blue)] min-h-[70vh] flex flex-col items-center justify-center text-center p-6">
+
+      <BackgroundBeamsWithCollision className="welcome gap-7 bg-[var(--dark-blue)] min-h-[70vh] flex flex-col items-center justify-center text-center p-6">
         <h2 className="font-extrabold uppercase md:text-[2.5rem] md:leading-11 max-w-[600px] text-[1.7rem] leading-9">
           Welcome to mystery embassy international
         </h2>
@@ -44,7 +47,7 @@ export default function Home() {
         >
           New Here?
         </Link>
-      </section>
+      </BackgroundBeamsWithCollision>
       <WeAre />
       <UpcomingEvts />
 
@@ -97,7 +100,18 @@ export default function Home() {
               ))}
             </Swiper>
             <div>
-              <p className="text-white font-[200]">
+              <motion.p
+                initial={{ x: 30, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{
+                  delay: 0.2,
+                  x: { type: "spring", duration: 1, stiffness: 40 },
+                  opacity: { duration: 2 },
+                  ease: "easeInOut",
+                }}
+                viewport={{ once: true }}
+                className="text-white font-[200]"
+              >
                 Hello! my name is Apostle Dr. Cloudio Tetteh. The head pastor of
                 <b> Mystery Embassy International</b>... a church you are proud
                 of, a family you are part of. I want to extend a warm welcome to
@@ -110,7 +124,7 @@ export default function Home() {
                 the digital realm with the light of our shared faith. Welcome,
                 dear one, to a place where pixels and prayers unite to create a
                 sacred online space.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>

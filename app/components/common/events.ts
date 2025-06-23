@@ -11,36 +11,36 @@ type eventValues = {
 };
 
 export const allEvents: eventValues[] = [
+  // {
+  //   name: "weekly bible study group",
+  //   flyer:
+  //     "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748160747/agro-ally/restoration-hour_jx7nej.jpg",
+  //   desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting industry. Lorem Ips been the industry&apos;s standard dum my text ever since the  when an unknown printer took a galley of type and scrambled make a type specimen book. It has survived not only five centuries, but also the leap.",
+  //   dayOfWeek: "Tuesday",
+  //   day: "2",
+  //   month: "November",
+  //   year: "2025",
+  //   time: "7:00 - 10:45 AM",
+  // },
+  // {
+  //   name: "Restoration Hour",
+  //   flyer:
+  //     "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748160747/agro-ally/restoration-hour_jx7nej.jpg",
+  //   desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting ",
+  //   dayOfWeek: "Tuesday",
+  //   day: "2",
+  //   month: "November",
+  //   year: "2025",
+  //   time: "7:00 - 10:45 AM",
+  // },
   {
-    name: "weekly bible study group",
+    name: "Breaking The Evil Pot",
     flyer:
-      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748160747/agro-ally/restoration-hour_jx7nej.jpg",
-    desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting industry. Lorem Ips been the industry&apos;s standard dum my text ever since the  when an unknown printer took a galley of type and scrambled make a type specimen book. It has survived not only five centuries, but also the leap.",
-    dayOfWeek: "Tuesday",
-    day: "2",
-    month: "November",
-    year: "2025",
-    time: "7:00 - 10:45 AM",
-  },
-  {
-    name: "Restoration Hour",
-    flyer:
-      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748160747/agro-ally/restoration-hour_jx7nej.jpg",
-    desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting ",
-    dayOfWeek: "Tuesday",
-    day: "2",
-    month: "November",
-    year: "2025",
-    time: "7:00 - 10:45 AM",
-  },
-  {
-    name: "You can win",
-    flyer:
-      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1748307262/homchapel/you_can_win_wwcnpd.jpg",
-    desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting ",
-    dayOfWeek: "Tuesday",
-    day: "2",
-    month: "November",
+      "https://res.cloudinary.com/dv9aqxptd/image/upload/v1750703131/homchapel/WhatsApp_Image_2025-06-21_at_12.51.04_ffecdb3b_thokem.jpg",
+    desc: "Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting. Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting. Aimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dum my tex since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has surviv only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.  dummy text of the printing and typesetting.",
+    dayOfWeek: "Wednesday",
+    day: "25",
+    month: "June",
     year: "2025",
     time: "7:00 - 10:45 AM",
   },

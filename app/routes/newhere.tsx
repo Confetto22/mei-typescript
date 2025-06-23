@@ -235,7 +235,16 @@ const Newhere = () => {
           />
           <ul className="expect_list flex flex-col gap-6">
             {expectations.map((singleExpectation) => (
-              <li
+              <motion.li
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", duration: 1, stiffness: 40 },
+                  opacity: { duration: 2 },
+                  ease: "easeInOut",
+                }}
+                viewport={{ once: true }}
                 className="expectation text-sm font-[200]"
                 key={singleExpectation.detail}
               >
@@ -247,7 +256,7 @@ const Newhere = () => {
                 </p>
 
                 {singleExpectation.detail}
-              </li>
+              </motion.li>
             ))}
           </ul>
           <p className=" font-[400] dark:text-white capitalize">

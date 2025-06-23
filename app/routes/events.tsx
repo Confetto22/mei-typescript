@@ -19,10 +19,12 @@ const Events = () => {
         {allEvents.map((evt) => (
           <div
             key={evt.name}
-            className="single-event max-w-[400px] border border-black rounded-sm p-4 flex flex-col items-start justify-between gap-5 mx-auto"
+            className="single-event max-w-[400px] border border-black rounded-sm p-4 flex flex-col items-start justify-start gap-5 mx-auto"
           >
             <div className="flyerBox overflow-hidden rounded-sm">
-              <Link to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}>
+              <Link
+                to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
+              >
                 <img
                   src={evt.flyer}
                   alt="mystery embassy international"
@@ -37,7 +39,7 @@ const Events = () => {
               </p>
 
               <Link
-                to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
+                to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
                 className="evt-title capitalize"
               >
                 {evt.name}
@@ -48,7 +50,7 @@ const Events = () => {
               </p>
 
               <Link
-                to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
+                to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
                 className="flex items-center gap-[.2rem] uppercase text-[.7rem] font-[700]"
               >
                 view details <MdArrowOutward className="text-[1.3rem]" />

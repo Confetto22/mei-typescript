@@ -1,18 +1,14 @@
-// import { Link, useNavigate } from "react-router-dom";
-// import { allEvents } from "./common/events";
 import { Link } from "react-router";
 import CountDown from "../common/countdown/countdown";
 import { allEvents } from "../common/events";
 import { FaRegClock } from "react-icons/fa6";
 import { LuCalendarDays } from "react-icons/lu";
-// import CountDown from "./common/countdown/CountDown";
 
 const closestEvts = allEvents.slice(0, 2);
 
 const UpcomingEvts = () => {
-  //   const navigate = useNavigate();
   return (
-    <section className="py-24 upcoming_evts  flex flex-col   text-stone-200">
+    <section className="py-24 upcoming_evts  flex flex-col  text-stone-200">
       <div className="dont_miss text-[#fbf0e0]  bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1745707493/homchapel/58-home-5_ohzm9x.webp')] bg-cover bg-center">
         <div className="cover bg-[#0000008e] flex flex-col items-center justify-center min-h-[45vh] md:gap-16 md:min-h-[80vh] gap-6 p-8">
           <p className="text-[1.6rem] md:text-[2rem] font-semibold capitalize text-center">
@@ -24,7 +20,7 @@ const UpcomingEvts = () => {
             year={"2025"}
           />
           <Link
-            to={"/about"}
+            to={"/events"}
             className="text-white bg-[var(--second-color)] md:px-12 md:py-4 px-9 py-2 uppercase font-bold text-[.8rem]"
           >
             join us
@@ -65,7 +61,7 @@ const UpcomingEvts = () => {
               <p className="text-[.9rem] font-[200] max-w-[500px] md:text-left">
                 {evt.desc.slice(0, 120)}...{" "}
                 <Link
-                  to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
+                  to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
                   className="text-[#4a4af3] font-[300] underline hover:underline-offset-2 duration-300 hover:opacity-70 capitalize"
                 >
                   {" "}
@@ -87,7 +83,7 @@ const UpcomingEvts = () => {
               </p>
 
               <Link
-                to={`/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
+                to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
                 className="uppercase  font-bold py-4 px-7 bg-[var(--second-color)] w-full text-center text-[.9rem] text-white mx-auto md:mx-[0] rounded-md"
               >
                 view details

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import {
   Dialog,
   DialogContent,
@@ -40,17 +40,23 @@ const navLinks = [
     refLink: "/events",
   },
   {
+    ref: "Gallery",
+    refLink: "/gallery",
+  },
+  {
     ref: "New Here?",
     refLink: "/new-here",
   },
 ];
 
-const topMenuLinks = navLinks.slice(0, 4);
+const topMenuLinks = navLinks.slice(0, 5);
 
 const Navbar = () => {
+  const location = useLocation().pathname;
+  // console.log(location);
   return (
     <>
-      <nav className="navbar z-10 bg-transparent fixed py-3 px-4 md:px-8 flex items-center justify-between  top-0 w-full bg-gradient-to-r from-[#521401] to-[#001933]">
+      <nav className="navbar  bg-transparent  py-3 px-4 md:px-8 flex items-center justify-between relative z-[10] top-0 w-full bg-gradient-to-r from-[#521401] to-[#001933]">
         <Link to={"/"}>
           <img
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458898/homchapel/cropped_logo_ccdry3.png"
@@ -60,7 +66,15 @@ const Navbar = () => {
         </Link>
         <menu className=" items-center gap-5 hidden md:flex">
           {topMenuLinks.map(({ ref, refLink }) => (
-            <Link to={refLink} key={ref} className="text-white">
+            <Link
+              to={refLink}
+              key={ref}
+              className={`ease-in duration-300 hover:opacity-70 ${
+                location === refLink
+                  ? "text-[var(--theme-yellow)] underline"
+                  : "text-white "
+              }`}
+            >
               {ref}
             </Link>
           ))}
@@ -160,7 +174,11 @@ const Navbar = () => {
                     <SheetClose asChild>
                       <Link
                         to={link.refLink}
-                        className="text-[#3c3c3c] hover:text-[var(--second-color)] ease-in duration-300 text-[1.2rem]"
+                        className={` hover:text-[var(--second-color)] ease-in duration-300 text-[1.2rem] ${
+                          location === link.refLink
+                            ? "text-[var(--second-color)] underline"
+                            : " text-[#3c3c3c]"
+                        }`}
                       >
                         {link.ref}
                       </Link>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import Button from "../common/button";
 import SecHeading from "../common/secheading";
 
@@ -29,13 +30,24 @@ const WeAre = () => {
             }
             divstyle={"items-start gap-4"}
           />
-          <p className="text-[1rem] md:text-[1rem]">
+          <motion.p
+            initial={{ x: -20, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", duration: 1, stiffness: 40 },
+              opacity: { duration: 2 },
+              ease: "easeInOut",
+            }}
+            viewport={{ once: true }}
+            className="text-[1rem] md:text-[1rem]"
+          >
             <b className="capitalize">mystery embassy international</b> is an
             independent, Christ-centered congregation dedicated to worship,
             spiritual growth, and serving our neighbors. We believe in creating
             a space where people can authentically encounter God, deepen their
             faith, and build meaningful relationships.
-          </p>
+          </motion.p>
           <Button
             text={"about us"}
             style={
@@ -52,6 +64,7 @@ const WeAre = () => {
           />
         </div>
       </div>
+
       <div className="values border relative mt-0 md:mt-12 border-[var(--theme-green)] rounded-2xl w-full grid grid-cols-1 md:grid-cols-3 md:px-2 px-12 min-h-[24vh] py-12 gap-4">
         {values.map((value) => (
           <div
@@ -59,9 +72,20 @@ const WeAre = () => {
             key={value.name}
           >
             <p className="font-bold text-[1.6rem]">{value.name}</p>
-            <p className="font-[400] text-[1.1rem] max-w-[230px]">
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", duration: 1, stiffness: 40 },
+                opacity: { duration: 2 },
+                ease: "easeInOut",
+              }}
+              viewport={{ once: true }}
+              className="font-[400] text-[1.1rem] max-w-[230px]"
+            >
               {value.desc}
-            </p>
+            </motion.p>
           </div>
         ))}
         <p className="always_welcome absolute text-[1.5rem] md:text-[2.4rem] tracking-wider bottom-[-40px] md:bottom-[-70px]  left-0 right-0 mx-auto max-w-[300px] text-center  bg-[#fff] w-[90%]">

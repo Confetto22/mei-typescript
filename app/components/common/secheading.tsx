@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 type SecHeadingProps = {
   subhead: string;
   mainhead: string;
@@ -14,12 +16,23 @@ const SecHeading = ({
   divstyle,
 }: SecHeadingProps) => {
   return (
-    <div className={`secheading flex flex-col ${divstyle}`}>
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.2,
+        y: { type: "spring", duration: 1, stiffness: 40 },
+        opacity: { duration: 2 },
+        ease: "easeInOut",
+      }}
+      viewport={{ once: true }}
+      className={`secheading flex flex-col ${divstyle}`}
+    >
       <p className={`subhead font-semibold uppercase px-2 ${substyle}`}>
         {subhead}
       </p>
       <p className={`mainhead ${mainstyle} uppercase`}>{mainhead}</p>
-    </div>
+    </motion.div>
   );
 };
 

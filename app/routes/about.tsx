@@ -7,11 +7,13 @@ import { useState } from "react";
 import CoreValues from "~/components/aboutpage/CoreValues";
 import JoinUs from "~/components/common/JoinUs";
 import Vision from "~/components/aboutpage/Vision";
+import { motion } from "motion/react";
 
 type Props = {};
 
 const About = (props: Props) => {
   const [hovered, setHovered] = useState(false);
+
   return (
     <section className="about-page  font-[300] text-[.9rem]">
       <PageHead
@@ -21,7 +23,18 @@ const About = (props: Props) => {
         prevLink="/"
       />
       <div className="px-6 py-24 flex flex-col md:flex-row-reverse md:justify-center md:items-center gap-8">
-        <div className="intro-text flex flex-col gap-3 md:w-[50%] md:max-w-[600px]">
+        <motion.div
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", duration: 1, stiffness: 40 },
+            opacity: { duration: 2 },
+            ease: "easeInOut",
+          }}
+          viewport={{ once: true }}
+          className="intro-text flex flex-col gap-3 md:w-[50%] md:max-w-[600px]"
+        >
           <h2 className="uppercase font-[500] text-[1.3rem] md:text-[1.7rem]">
             welcome to <b>mystery embassy international</b>
           </h2>
@@ -39,20 +52,42 @@ const About = (props: Props) => {
             together. We&apos;re a community driven to make the world a better
             place—starting in our own backyard.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="imageBox rounded-md overflow-hidden shadow-xl md:w-[45%]">
+        <motion.div
+          initial={{ x: -15, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", duration: 1, stiffness: 40 },
+            opacity: { duration: 2 },
+            ease: "easeInOut",
+          }}
+          viewport={{ once: true }}
+          className="imageBox rounded-md overflow-hidden shadow-xl md:w-[45%]"
+        >
           <img
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp"
             alt="mystery embassy international"
             className="w-full h-full object-cover rounded-md shadow-xl aspect-video md:aspect-auto hover:scale-110 duration-500 ease-in-out hover:shadow-2xl hover:opacity-95"
           />
-        </div>
+        </motion.div>
       </div>
       {/* <Vision /> */}
       <Success />
       <section className="visit-sermons flex flex-col gap-8 pt-24">
-        <div className="flex flex-col gap-4 items-center text-center px-7 justify-center py-5  min-h-[40vh]">
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", duration: 1, stiffness: 40 },
+            opacity: { duration: 2 },
+            ease: "easeInOut",
+          }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-4 items-center text-center px-7 justify-center py-5  min-h-[40vh]"
+        >
           <p className="bg-[var(--second-color)] px-1 tracking-wider md:text-[1.2rem] text-white uppercase font-[300]">
             beliefs that unite us
           </p>
@@ -64,7 +99,7 @@ const About = (props: Props) => {
             around them. Their mission in life is to ensure the wonder in the
             world is not overlooked.
           </p>
-        </div>
+        </motion.div>
         <div className="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054653/homchapel/DSC_0394_uoverd.webp')] bg-center bg-cover ">
           <Link to={"https://www.youtube.com/@mysteryembassy"} target="_blank">
             <div

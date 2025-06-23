@@ -1,3 +1,14 @@
+import { motion } from "motion/react";
+
+const successStories = [
+  "The LORD commissioned Dr. Cloudio in 2016 to begin this ministry which the Lord Christened, Maranatha Word Chapel International (MWCI). The church begun at Ablekuma with seven people. The church continued steadfastly in sharing the word, prayer and fasting. God's power became imminent in every MWCI's service and the church begun to grow.",
+  "The church transitioned from Ablekuma to Santa Maria where the church continued to blossom. God through the anointing he has bestowed upon His manservant manifested countless magnificent and incredible miracles in the lives of people who fellowshipped with the church. The move of God was so strong; some of those testimonies were so mind blowing that till today it still marvels dozens of people.",
+  "In 2021 the Lord directed His manservant to rebrand the church from MWCI to House of Mystery Chapel International (HoM Chapel). HoM Chapel has been the hub of mysterious insight into deep revelations in God's word, miracles, signs and wonders.",
+  "In 2022 we faced a very challenging time in the history of this church when we had to move from Santa Maria to Weija. The Head Pastor had to sell everything he had including his lands, cars and anything he could lay hands on. He sold them all to build this beautiful auditorium for God; the mystery temple.",
+  "It was moments of toil, labor and sleepless nights. But God came through for the ministry and gave us divine enablement to finish and furnish this place. Through the grace and the mercies of God we have grown over the years into an avalanche of startling and awesome group of citizens of the kingdom of God.",
+  "And guess what, God is now doing even much more greater and amazing things in the life of citizens, bringing about greater testimonies to the glory of God. There's no denying that this church community, is a gift from the Lord Himself. In fact, this church is nothing short of a miracle and we give all the thanks and glory to God.",
+];
+
 type Props = {};
 
 const Success = (props: Props) => {
@@ -7,49 +18,22 @@ const Success = (props: Props) => {
         <h2 className="text-white font-[500] uppercase text-[1.7rem]">
           OUR SUCCESS STORY
         </h2>
-        <p>
-          The LORD commissioned Dr. Cloudio in 2016 to begin this ministry which
-          the Lord Christened, Maranatha Word Chapel International (MWCI). The
-          church begun at Ablekuma with seven people. The church continued
-          steadfastly in sharing the word, prayer and fasting. God&apos;s power
-          became imminent in every MWCI&apos;s service and the church begun to
-          grow.
-        </p>
-        <p>
-          The church transitioned from Ablekuma to Santa Maria where the church
-          continued to blossom. God through the anointing he has bestowed upon
-          His manservant manifested countless magnificent and incredible
-          miracles in the lives of people who fellowshipped with the church. The
-          move of God was so strong; some of those testimonies were so mind
-          blowing that till today it still marvels dozens of people.
-        </p>
-        <p>
-          In 2021 the Lord directed His manservant to rebrand the church from
-          MWCI to House of Mystery Chapel International (HoM Chapel). HoM Chapel
-          has been the hub of mysterious insight into deep revelations in God’s
-          word, miracles, signs and wonders.
-        </p>
-        <p>
-          In 2022 we faced a very challenging time in the history of this church
-          when we had to move from Santa Maria to Weija. The Head Pastor had to
-          sell everything he had including his lands, cars and anything he could
-          lay hands on. He sold them all to build this beautiful auditorium for
-          God; the mystery temple.
-        </p>
-        <p>
-          It was moments of toil, labor and sleepless nights. But God came
-          through for the ministry and gave us divine enablement to finish and
-          furnish this place. Through the grace and the mercies of God we have
-          grown over the years into an avalanche of startling and awesome group
-          of citizens of the kingdom of God.
-        </p>
-        <p>
-          And guess what, God is now doing even much more greater and amazing
-          things in the life of citizens, bringing about greater testimonies to
-          the glory of God. There's no denying that this church community, is a
-          gift from the Lord Himself. In fact, this church is nothing short of a
-          miracle and we give all the thanks and glory to God.
-        </p>
+        {successStories.map((story) => (
+          <motion.p
+            key={story}
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              y: { type: "spring", duration: 4, stiffness: 40 },
+              opacity: { duration: 2 },
+              ease: "easeInOut",
+            }}
+            viewport={{ once: true }}
+          >
+            {story}
+          </motion.p>
+        ))}
       </div>
       {/* <div className="imageBox rounded-md overflow-hidden shadow-xl hidden md:flex md:w-[30%]">
         <img
