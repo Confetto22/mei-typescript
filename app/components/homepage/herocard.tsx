@@ -1,7 +1,10 @@
 import { Link } from "react-router";
 import Button from "../common/button";
 import { TextGenerateEffect } from "components/ui/text-generate-effect";
-import { TypewriterEffectSmooth } from "components/ui/typewriter-effect";
+import {
+  TypewriterEffect,
+  TypewriterEffectSmooth,
+} from "components/ui/typewriter-effect";
 
 const churchnameStyles =
   "text-[var(--main-color)] font-bold text-[2.2rem] md:text-[3.2rem] leading-[2rem] md:leading-[3rem] uppercase";
@@ -63,7 +66,7 @@ const HeroCard = () => {
             <b>i</b>nternational
           </p> */}
         </div>
-        <TypewriterEffectSmooth
+        <TypewriterEffect
           cursorClassName="string"
           words={typewriterWords}
           className="capitalize text-[1rem] md:text-[1.3rem] font-[200] text-white"
