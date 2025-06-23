@@ -54,7 +54,10 @@ export const TypewriterEffect = ({
                 <motion.span
                   initial={{}}
                   key={`char-${index}`}
-                  className={cn(` opacity-0 hidden`, word.className)}
+                  className={cn(
+                    `dark:text-white text-black opacity-0 hidden`,
+                    word.className
+                  )}
                 >
                   {char}
                 </motion.span>
@@ -121,7 +124,10 @@ export const TypewriterEffectSmooth = ({
           return (
             <div key={`word-${idx}`} className="inline-block">
               {word.text.map((char, index) => (
-                <span key={`char-${index}`} className={cn(``, word.className)}>
+                <span
+                  key={`char-${index}`}
+                  className={cn(`dark:text-white text-white `, word.className)}
+                >
                   {char}
                 </span>
               ))}
@@ -134,9 +140,9 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-6", className)}>
+    <div className={cn("flex  w-fit  my-6", className)}>
       <motion.div
-        className="overflow-hidden pb-2"
+        className="overflow-hidden "
         initial={{
           width: "0%",
         }}
@@ -150,7 +156,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className=""
+          className="sm:whitespace-nowrap"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -166,13 +172,13 @@ export const TypewriterEffectSmooth = ({
           opacity: 1,
         }}
         transition={{
-          duration: 1.3,
+          duration: 0.8,
 
           repeat: Infinity,
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px]  h-4 sm:h-6  bg-[var(--theme-yellow)]",
+          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-[var(--theme-yellow)]",
           cursorClassName
         )}
       ></motion.span>
