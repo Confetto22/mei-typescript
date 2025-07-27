@@ -39,6 +39,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
         />
+        <link rel="preload" href="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458898/homchapel/cropped_logo_ccdry3.png" as="image" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
         <meta name="theme-color" content="#001d3d" />
         <meta name="color-scheme" content="light dark" />
         <meta name="format-detection" content="telephone=no" />

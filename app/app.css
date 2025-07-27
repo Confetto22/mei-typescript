@@ -14,6 +14,20 @@
   }
 }
 
+/* Performance optimizations */
+* {
+  will-change: auto;
+}
+
+.hover-transform {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+img {
+  content-visibility: auto;
+}
+
 /* Modern card styles */
 .modern-card {
   background: rgba(255, 255, 255, 0.95);
@@ -138,9 +152,10 @@
 html,
 body {
   font-family: var(--second-font);
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  contain: layout style paint;
 }
 
 /* Modern scrollbar styling */

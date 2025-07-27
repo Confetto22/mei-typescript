@@ -62,6 +62,10 @@ const Navbar = () => {
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458898/homchapel/cropped_logo_ccdry3.png"
             alt="mystery embassy international"
             className="logo max-w-[80px] drop-shadow-lg"
+            width="80"
+            height="80"
+            loading="eager"
+            decoding="sync"
           />
         </Link>
         <menu className="items-center gap-8 hidden md:flex">
@@ -89,7 +93,10 @@ const Navbar = () => {
               <img
                 src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748369654/homchapel/money_1_u8oyip.png"
                 alt="give button"
-                className=""
+                width="24"
+                height="24"
+                loading="lazy"
+                decoding="async"
               />
             </button>
           </DialogTrigger>
@@ -141,7 +148,9 @@ const Navbar = () => {
                   <img
                     src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748295776/homchapel/58-about-5_mjzap7.webp"
                     alt="mystery embassy international"
-                    className="w-full h-full object-cover "
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </section>

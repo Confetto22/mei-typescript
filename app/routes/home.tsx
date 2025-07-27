@@ -91,9 +91,11 @@ export default function Home() {
                   <img
                     src={pic}
                     alt={`Apostle Dr. Cloudio - Image ${index + 1}`}
-                    className="daddypic object-center object-cover rounded-md aspect-[8/9] transition-transform duration-300 hover:scale-105"
+                    className="daddypic object-center object-cover rounded-md aspect-[8/9] hover-transform"
                     loading="lazy"
                     decoding="async"
+                    width="300"
+                    height="337"
                   />
                 </SwiperSlide>
               ))}
