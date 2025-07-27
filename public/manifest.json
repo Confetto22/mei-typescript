@@ -1,0 +1,19 @@
+{
+  "name": "Mystery Embassy International",
+  "short_name": "MEI Church",
+  "description": "A warm and welcoming community of believers committed to growing in faith, serving others, and sharing the love of Christ.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#001d3d",
+  "theme_color": "#001d3d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["lifestyle", "social"],
+  "lang": "en-US"
+}

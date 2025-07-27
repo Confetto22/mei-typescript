@@ -27,31 +27,28 @@ const daddyPics: string[] = [
 
 export default function Home() {
   return (
-    <main className="homepage relative overflow-x-hidden">
+    <main className="homepage relative overflow-x-hidden pt-20">
       <HeroCard />
 
-      <BackgroundBeamsWithCollision className="welcome gap-7 bg-[var(--dark-blue)] min-h-[70vh] flex flex-col items-center justify-center text-center p-6">
-        <h2 className="font-extrabold uppercase md:text-[2.5rem] md:leading-11 max-w-[600px] text-[1.7rem] leading-9">
-          Welcome to mystery embassy international
+      <BackgroundBeamsWithCollision className="welcome gap-8 bg-gradient-to-br from-[var(--dark-blue)] via-[#001a36] to-[#000d1a] min-h-[80vh] flex flex-col items-center justify-center text-center p-8 relative">
+        <h2 className="font-extrabold uppercase md:text-[3rem] md:leading-tight max-w-[800px] text-[2rem] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-[var(--theme-yellow)] to-white">
+          Welcome to Mystery Embassy International
         </h2>
-        <p className="font-[400] text-[1rem] text-white max-w-[900px]">
-          We are a warm and welcoming community of believers committed to
-          growing in faith, serving others, and sharing the love of Christ.
-          Whether you&apos;re exploring faith for the first time or looking for
-          a church to call home, we invite you to join us and experience the
-          love and fellowship of our congregation.
+        <p className="font-light text-lg text-gray-200 max-w-[900px] leading-relaxed">
+          We are a warm and welcoming community of believers committed to growing in faith, serving others, and sharing the love of Christ. Whether you're exploring faith for the first time or looking for a church to call home, we invite you to join us and experience the love and fellowship of our congregation.
         </p>
         <Link
           to={"/new-here"}
-          className="uppercase bg-[var(--second-color)] text-white px-4 py-2 border border-[var(--second-color)] hover:bg-white hover:text-[var(--second-color)] transition-colors duration-300 font-semibold text-[1rem] md:text-[1.2rem] flex items-center justify-center mt-4"
+          className="group relative overflow-hidden uppercase bg-[var(--second-color)] text-white px-6 py-3 border border-[var(--second-color)] hover:bg-white hover:text-[var(--second-color)] transition-all duration-300 font-semibold text-[1rem] md:text-[1.2rem] flex items-center justify-center mt-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
         >
-          New Here?
+          <span className="relative z-10">New Here?</span>
+          <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
         </Link>
       </BackgroundBeamsWithCollision>
       <WeAre />
       <UpcomingEvts />
 
-      <section className="leader px-8 py-24 flex flex-col gap-8 bg-[var(--dark-blue)] ">
+      <section className="leader px-8 py-24 flex flex-col gap-12 bg-gradient-to-br from-[var(--dark-blue)] via-[#001a36] to-[#000d1a] relative overflow-hidden">
         <SecHeading
           substyle={
             " text-[.9rem] md:text-[1.2rem] bg-white text-[var(--dark-blue)] "
@@ -89,12 +86,14 @@ export default function Home() {
               }}
               className="mySwiper"
             >
-              {daddyPics.map((pic) => (
+              {daddyPics.map((pic, index) => (
                 <SwiperSlide key={pic}>
                   <img
                     src={pic}
-                    alt="Apostle Dr. Cloudio"
-                    className="daddypic object-center object-cover rounded-md aspect-[8/9]"
+                    alt={`Apostle Dr. Cloudio - Image ${index + 1}`}
+                    className="daddypic object-center object-cover rounded-md aspect-[8/9] transition-transform duration-300 hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </SwiperSlide>
               ))}
@@ -133,21 +132,19 @@ export default function Home() {
       <Sermons />
       <Testimonials />
       <BibleVerse />
-      <section className="planvisit min-h-[60vh] flex flex-col items-center justify-center gap-4 text-center p-6">
-        <h2 className="text-[1.8rem] md:text-[2.5rem] font-extrabold uppercase">
+      <section className="planvisit min-h-[70vh] flex flex-col items-center justify-center gap-8 text-center p-8 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <h2 className="text-3xl md:text-5xl font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-blue)] to-[var(--second-color)]">
           Plan Your Visit
         </h2>
-        <p className="text-[1rem] md:max-w-[600px]">
-          We are excited to welcome you to our church! Whether you are new to
-          the area or looking for a place to call home, we invite you to join us
-          for worship and fellowship. Our doors are open, and we can&apos;t wait
-          to meet you!
+        <p className="text-lg md:max-w-[700px] text-gray-700 leading-relaxed">
+          We are excited to welcome you to our church! Whether you are new to the area or looking for a place to call home, we invite you to join us for worship and fellowship. Our doors are open, and we can't wait to meet you!
         </p>
         <Link
           to={"/contact"}
-          className="uppercase bg-[var(--second-color)] text-white px-4 py-2 border border-[var(--second-color)] hover:bg-transparent hover:text-[var(--second-color)] transition-colors duration-300 font-semibold text-[1rem] md:text-[1.2rem] flex items-center justify-center mt-4"
+          className="group relative overflow-hidden uppercase bg-[var(--second-color)] text-white px-6 py-3 border border-[var(--second-color)] hover:bg-transparent hover:text-[var(--second-color)] transition-all duration-300 font-semibold text-[1rem] md:text-[1.2rem] flex items-center justify-center mt-4 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
         >
-          plan visit
+          <span className="relative z-10">Plan Visit</span>
+          <div className="absolute inset-0 bg-transparent border-2 border-[var(--second-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
         </Link>
       </section>
       {/* <Widget /> */}

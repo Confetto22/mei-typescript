@@ -15,14 +15,14 @@ const About = (props: Props) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <section className="about-page  font-[300] text-[.9rem]">
+    <section className="about-page font-[300] text-[.9rem] pt-20">
       <PageHead
         bgPic="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')]"
         prevPage="Home"
         currPage="About"
         prevLink="/"
       />
-      <div className="px-6 py-24 flex flex-col md:flex-row-reverse md:justify-center md:items-center gap-8">
+      <div className="flex flex-col gap-12 px-6 py-24 mx-auto md:flex-row-reverse md:justify-center md:items-center max-w-7xl">
         <motion.div
           initial={{ x: 30, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -33,25 +33,30 @@ const About = (props: Props) => {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
-          className="intro-text flex flex-col gap-3 md:w-[50%] md:max-w-[600px]"
+          className="intro-text flex flex-col gap-6 md:w-[50%] md:max-w-[600px]"
         >
-          <h2 className="uppercase font-[500] text-[1.3rem] md:text-[1.7rem]">
-            welcome to <b>mystery embassy international</b>
+          <h2 className="uppercase font-[500] text-[1.3rem] md:text-[2.2rem] leading-tight">
+            Welcome to{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--second-color)] to-red-600 font-bold">
+              Mystery Embassy International
+            </span>
           </h2>
-          <p>
-            Our curriculum appeals to student diversity and interest, and is
-            rigorous and challenging. We understand each child comes to us with
-            different talents, learning styles, and identities. And we celebrate
-            that difference because our diversity is our strength.
-          </p>
-          <p>
-            Community is everything at Corlears. It&apos;s who we are and how
-            things get done. Everyone here is motivated by a deep commitment to
-            making sure each child and family feels welcome and included. When
-            everyone feels like they belong, we are stronger and smarter
-            together. We&apos;re a community driven to make the world a better
-            place—starting in our own backyard.
-          </p>
+          <div className="space-y-4 leading-relaxed text-gray-700">
+            <p className="text-lg">
+              Our ministry appeals to diverse backgrounds and interests,
+              offering a rigorous yet welcoming spiritual journey. We understand
+              each person comes to us with different talents, experiences, and
+              identities. We celebrate this diversity because it is our
+              strength.
+            </p>
+            <p className="text-lg">
+              Community is everything at Mystery Embassy International. It's who
+              we are and how things get done. Everyone here is motivated by a
+              deep commitment to making sure each person and family feels
+              welcome and included. When everyone feels like they belong, we are
+              stronger and smarter together.
+            </p>
+          </div>
         </motion.div>
 
         <motion.div
@@ -64,18 +69,18 @@ const About = (props: Props) => {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
-          className="imageBox rounded-md overflow-hidden shadow-xl md:w-[45%]"
+          className="imageBox rounded-2xl overflow-hidden shadow-2xl md:w-[45%] group"
         >
           <img
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp"
             alt="mystery embassy international"
-            className="w-full h-full object-cover rounded-md shadow-xl aspect-video md:aspect-auto hover:scale-110 duration-500 ease-in-out hover:shadow-2xl hover:opacity-95"
+            className="object-cover w-full h-full transition-all duration-700 ease-in-out aspect-video md:aspect-auto group-hover:scale-110"
           />
         </motion.div>
       </div>
       {/* <Vision /> */}
       <Success />
-      <section className="visit-sermons flex flex-col gap-8 pt-24">
+      <section className="flex flex-col gap-8 pt-24 visit-sermons">
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

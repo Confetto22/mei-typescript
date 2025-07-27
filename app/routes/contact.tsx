@@ -36,25 +36,28 @@ const contactCards: cardsProps[] = [
 
 const Contact = () => {
   return (
-    <section>
+    <section className="pt-20">
       <PageHead
         bgPic="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')]"
         prevPage="Home"
         currPage="Contact"
         prevLink="/"
       />
-      <section className="flex flex-col md:flex-row md:items-center md:justify-center">
-        <div className="formBox  px-7 py-15 flex flex-col items-start gap-4 md:w-[50%]">
-          <h2 className=" text-[1.5rem] md:text-[2.3rem] font-bold ">
-            Reach Out to Us
-          </h2>
-          <p className="max-w-[500px] text-[#3e3e3e] font-[300]">
-            If you have any questions, you can contact us. Please, fill out the
-            form below.
-          </p>
+      <section className="flex flex-col gap-12 px-4 py-16 mx-auto md:flex-row md:items-start md:justify-center max-w-7xl">
+        <div className="formBox flex flex-col items-start gap-6 md:w-[55%]">
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-blue)] to-[var(--second-color)]">
+              Reach Out to Us
+            </h2>
+            <p className="max-w-[500px] text-gray-600 text-lg leading-relaxed">
+              We'd love to hear from you! Whether you have questions about our
+              services, want to join our community, or need prayer support,
+              please fill out the form below.
+            </p>
+          </div>
           <form
             autoComplete="off"
-            className="contact-form w-full max-w-[600px] flex flex-col gap-4"
+            className="contact-form w-full max-w-[600px] flex flex-col gap-6 bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-100"
           >
             <div>
               <label htmlFor="name">
@@ -93,25 +96,28 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-[var(--second-color)] py-3 px-4 text-white font-[400] text-[.9rem] uppercase"
+              className="group relative overflow-hidden bg-gradient-to-r from-[var(--second-color)] to-red-600 py-4 px-8 text-white font-medium text-sm uppercase rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              Send message
+              <span className="relative z-10">Send Message</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-[var(--second-color)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </button>
           </form>
         </div>
-        <section className="contact-cards  px-7 py-15 flex flex-col gap-6 md:w-[40%] ">
+        <section className="contact-cards flex flex-col gap-6 md:w-[40%]">
           {contactCards.map((card) => (
             <Link
               to={card.refLink}
               key={card.title}
-              className="contact-card w-full max-w-[450px] md:max-w-[360px] py-[3rem]  flex items-center gap-4 p-4 border border-gray-300 hover:border-[var(--second-color)] rounded-md hover:shadow-lg transition duration-300"
+              className="contact-card w-full max-w-[450px] md:max-w-[360px] py-8 px-6 flex items-center gap-6 bg-white/80 backdrop-blur-sm border border-gray-200 hover:border-[var(--second-color)] rounded-2xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
             >
-              <span className="icon text-[2rem] text-[var(--second-color)]">
+              <span className="icon text-3xl text-[var(--second-color)] group-hover:scale-110 transition-transform duration-300">
                 {card.icon}
               </span>
               <div className="text">
-                <h3 className="font-[500]">{card.title}</h3>
-                <p className="text-[.8rem] font-[300] text-[#454545d3] ">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {card.title}
+                </h3>
+                <p className="text-sm font-light text-gray-600 group-hover:text-[var(--second-color)] transition-colors duration-300">
                   {card.value}
                 </p>
               </div>

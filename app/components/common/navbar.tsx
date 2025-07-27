@@ -56,24 +56,24 @@ const Navbar = () => {
   // console.log(location);
   return (
     <>
-      <nav className="navbar  bg-transparent  py-3 px-4 md:px-8 flex items-center justify-between relative z-[10] top-0 w-full bg-gradient-to-r from-[#521401] to-[#001933]">
-        <Link to={"/"}>
+      <nav className="navbar fixed top-0 w-full z-50 backdrop-blur-md bg-gradient-to-r from-[#521401]/90 to-[#001933]/90 py-4 px-4 md:px-8 flex items-center justify-between border-b border-white/10 shadow-lg transition-all duration-300">
+        <Link to={"/"} className="transition-transform duration-300 hover:scale-105">
           <img
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458898/homchapel/cropped_logo_ccdry3.png"
             alt="mystery embassy international"
-            className="logo max-w-[80px] "
+            className="logo max-w-[80px] drop-shadow-lg"
           />
         </Link>
-        <menu className=" items-center gap-5 hidden md:flex">
+        <menu className="items-center gap-8 hidden md:flex">
           {topMenuLinks.map(({ ref, refLink }) => (
             <Link
               to={refLink}
               key={ref}
-              className={`ease-in duration-300 hover:opacity-70 ${
+              className={`relative px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
                 location === refLink
-                  ? "text-[var(--theme-yellow)] underline"
-                  : "text-white "
-              }`}
+                  ? "text-[var(--theme-yellow)] bg-white/10 shadow-lg"
+                  : "text-white hover:text-[var(--theme-yellow)] hover:bg-white/5"
+              } before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[var(--theme-yellow)] before:transition-all before:duration-300 hover:before:w-full`}
             >
               {ref}
             </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
           <DialogTrigger asChild className="">
             <button
               type="button"
-              className=" bg-[var(--theme-yellow)] p-3 max-w-[60px] rounded-full cursor-pointer hover:bg-[#ab8300] ease-in duration-300"
+              className="bg-[var(--theme-yellow)] p-3 max-w-[60px] rounded-full cursor-pointer hover:bg-[#ab8300] transition-all duration-300 hover:scale-110 hover:shadow-xl shadow-lg"
             >
               <img
                 src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1748369654/homchapel/money_1_u8oyip.png"
@@ -157,44 +157,33 @@ const Navbar = () => {
           <SheetTrigger asChild>
             <button
               type="button"
-              className="md:hidden text-white text-[2.4rem] cursor-pointer hover:opacity-80 ease-in duration-300"
+              className="md:hidden text-white text-2xl cursor-pointer hover:scale-110 transition-all duration-300 p-2 rounded-lg hover:bg-white/10"
             >
               <IoMenu />
             </button>
-            {/* <Button variant="outline">Open</Button> */}
           </SheetTrigger>
-          <SheetContent className="">
-            <SheetHeader>
-              <SheetTitle className="text-[1.2rem]">
-                Mystery Embassy International
+          <SheetContent className="bg-gradient-to-br from-[var(--dark-blue)] via-[#001a36] to-[#000d1a] border-l border-white/10 backdrop-blur-xl">
+            <SheetHeader className="border-b border-white/10 pb-6">
+              <SheetTitle className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--theme-yellow)] to-white">
+                Mystery Embassy
               </SheetTitle>
-              <SheetDescription className="">
-                <ul className="menuItems  flex flex-col h-[70vh] gap-5 items-start pt-5">
-                  {navLinks.map((link) => (
-                    <SheetClose asChild>
-                      <Link
-                        to={link.refLink}
-                        className={` hover:text-[var(--second-color)] ease-in duration-300 text-[1.2rem] ${
-                          location === link.refLink
-                            ? "text-[var(--second-color)] underline"
-                            : " text-[#3c3c3c]"
-                        }`}
-                      >
-                        {link.ref}
-                      </Link>
-                    </SheetClose>
-                  ))}
-                </ul>
-              </SheetDescription>
             </SheetHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4"></div>
-            </div>
-            <SheetFooter>
-              {/* <SheetClose asChild>
-                <button type="button">Save changes</button>
-              </SheetClose> */}
-            </SheetFooter>
+            <nav className="flex flex-col gap-2 pt-8">
+              {navLinks.map((link) => (
+                <SheetClose asChild key={link.ref}>
+                  <Link
+                    to={link.refLink}
+                    className={`group relative px-4 py-3 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105 ${
+                      location === link.refLink
+                        ? "text-[var(--theme-yellow)] bg-white/10 shadow-lg"
+                        : "text-white hover:text-[var(--theme-yellow)] hover:bg-white/5"
+                    } before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-[var(--theme-yellow)] before:scale-y-0 before:transition-transform before:duration-300 hover:before:scale-y-100`}
+                  >
+                    {link.ref}
+                  </Link>
+                </SheetClose>
+              ))}
+            </nav>
           </SheetContent>
         </Sheet>
       </nav>

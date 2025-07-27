@@ -5,55 +5,61 @@ import { allEvents } from "~/components/common/events";
 
 const Events = () => {
   return (
-    <section className="events page">
+    <section className="events page pt-20">
       <PageHead
         bgPic="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')]"
         prevPage="Home"
         currPage="Events"
         prevLink="/"
       />
-      <h2 className="text-center text-[1.5rem] md:text-[2.3rem] font-bold mt-24">
-        Upcoming Events
-      </h2>
-      <div className="all-events px-7 py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[2rem]">
+      <div className="text-center mt-16 mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-blue)] to-[var(--second-color)] mb-4">
+          Upcoming Events
+        </h2>
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          Join us for these exciting upcoming events and be part of our growing community.
+        </p>
+      </div>
+      <div className="all-events px-7 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {allEvents.map((evt) => (
           <div
             key={evt.name}
-            className="single-event max-w-[400px] border border-black rounded-sm p-4 flex flex-col items-start justify-start gap-5 mx-auto"
+            className="single-event modern-card max-w-[400px] p-6 flex flex-col items-start justify-start gap-6 mx-auto group hover:scale-105 transition-all duration-300"
           >
-            <div className="flyerBox overflow-hidden rounded-sm">
+            <div className="flyerBox overflow-hidden rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
               <Link
                 to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
               >
                 <img
                   src={evt.flyer}
-                  alt="mystery embassy international"
-                  className="flyer hover:scale-110 ease-in duration-500 rounded-sm"
+                  alt={`${evt.name} event flyer`}
+                  className="flyer w-full h-48 object-cover hover:scale-110 transition-transform duration-700 rounded-xl"
+                  loading="lazy"
                 />
               </Link>
             </div>
 
-            <div className="event-text flex flex-col items-start justify-center gap-2">
-              <p className="date-time text-[.7rem]">
+            <div className="event-text flex flex-col items-start justify-center gap-3 flex-1">
+              <div className="bg-gradient-to-r from-[var(--second-color)] to-red-600 text-white px-3 py-1 rounded-full text-xs font-medium">
                 {evt.month} {evt.day}, {evt.year} @ {evt.time}
-              </p>
+              </div>
 
               <Link
                 to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
-                className="evt-title capitalize"
+                className="evt-title capitalize text-xl font-bold text-gray-800 hover:text-[var(--second-color)] transition-colors duration-300 line-clamp-2"
               >
                 {evt.name}
               </Link>
 
-              <p className="evt-desc text-[.8rem] font-[200]">
+              <p className="evt-desc text-sm text-gray-600 leading-relaxed line-clamp-3">
                 {evt.desc.slice(0, 120)}...
               </p>
 
               <Link
                 to={`/events/${evt.name.replaceAll(" ", "-").toLowerCase()}`}
-                className="flex items-center gap-[.2rem] uppercase text-[.7rem] font-[700]"
+                className="flex items-center gap-2 uppercase text-xs font-bold text-[var(--second-color)] hover:text-red-600 transition-colors duration-300 mt-auto group-hover:translate-x-1"
               >
-                view details <MdArrowOutward className="text-[1.3rem]" />
+                View Details <MdArrowOutward className="text-base group-hover:rotate-45 transition-transform duration-300" />
               </Link>
             </div>
           </div>

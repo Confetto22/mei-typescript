@@ -25,22 +25,31 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://cdn.boxicons.com/fonts/basic/boxicons.min.css",
   },
+  { rel: "manifest", href: "/manifest.json" },
+  { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1 maximum-scale=1"
+          content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
         />
-
+        <meta name="theme-color" content="#001d3d" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="antialiased">
         {children}
         <ScrollRestoration />
         <Scripts />

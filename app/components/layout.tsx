@@ -1,21 +1,34 @@
 import { Outlet } from "react-router";
+import { Suspense } from "react";
 import Navbar from "./common/navbar";
 import Picsgrid from "./common/picsgrid";
 import Footer from "./common/footer";
-import BibleVerse from "./common/BibleVerse";
 import Widget from "./common/Widget";
+import { ErrorBoundary } from "./ui/error-boundary";
+import { Skeleton } from "./ui/loading-skeleton";
 
-const layout = () => {
+function LoadingFallback() {
   return (
-    <>
-      <Navbar />
+    <div className="min-h-screen p-4 space-y-4">
+      <Skeleton className="h-8 w-64" />
+      <Skeleton className="h-64 w-full" />
+      <Skeleton className="h-32 w-full" />
+    </div>
+  );
+}
 
-      <Outlet />
+const Layout = () => {
+  return (
+    <ErrorBoundary>
+      <Navbar />
+      <Suspense fallback={<LoadingFallback />}>
+        <Outlet />
+      </Suspense>
       <Widget />
       <Picsgrid />
       <Footer />
-    </>
+    </ErrorBoundary>
   );
 };
 
-export default layout;
+export default Layout;

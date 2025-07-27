@@ -85,47 +85,45 @@ const resourceLinks = [
 
 const Footer = () => {
   return (
-    <footer className="min-h-[50vh] bg-[var(--dark-blue)] py-8 px-7 md:px-12 flex flex-col gap-14 ">
-      <div className="newsletter  text-stone-200 flex flex-col gap-4 max-w-[1000px] md:w-[80%] mx-auto items-center text-center">
-        <p>Stay Connected</p>
-        <p>Get updates on events and inspiration.</p>
+    <footer className="min-h-[50vh] bg-gradient-to-br from-[var(--dark-blue)] via-[#001a36] to-[#000d1a] py-12 px-7 md:px-12 flex flex-col gap-16 relative overflow-hidden">
+      <div className="newsletter text-stone-200 flex flex-col gap-6 max-w-[1000px] md:w-[80%] mx-auto items-center text-center relative z-10">
+        <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--theme-yellow)] to-white">Stay Connected</h3>
+        <p className="text-lg text-gray-300">Get updates on events and inspiration delivered to your inbox.</p>
         <form
-          className="letter-form  flex items-center justify-center gap-0 w-full"
+          className="letter-form flex items-center justify-center gap-0 w-full max-w-md mx-auto"
           onSubmit={(e) => e.preventDefault()}
         >
           <input
-            type="text"
+            type="email"
             required
-            className="border-none w-[70%] bg-white  min-h-[2.3rem]  rounded-l-[2rem] outline-none text-[#242424] pl-[2rem] text-[.7rem] md:text-[.9rem]"
-            placeholder="e-mail / phone no."
+            className="flex-1 bg-white/90 backdrop-blur-sm min-h-[3rem] rounded-l-2xl outline-none text-gray-800 pl-6 text-sm md:text-base placeholder-gray-500 border border-white/20 focus:border-[var(--theme-yellow)] transition-all duration-300"
+            placeholder="Enter your email address"
           />
           <button
             type="submit"
-            className="w-[30%] bg-[var(--second-color)] border-none hover:cursor-pointer  text-[.8rem] uppercase min-h-[2.3rem] tracking-wider rounded-r-[2rem] hover:bg-[#954026] ease-in-out duration-300"
+            className="px-6 bg-gradient-to-r from-[var(--second-color)] to-red-600 border-none cursor-pointer text-sm uppercase min-h-[3rem] tracking-wider rounded-r-2xl hover:from-red-600 hover:to-[var(--second-color)] transition-all duration-300 text-white font-medium shadow-lg hover:shadow-xl"
           >
-            submit
+            Subscribe
           </button>
         </form>
       </div>
-      <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-y-[4rem] md:gap-y-0">
-        <div className="div-1 flex flex-col items-start gap-3 ">
+      <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-12 md:gap-x-8 md:gap-y-0 relative z-10">
+        <div className="div-1 flex flex-col items-start gap-6">
           <img
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1745458898/homchapel/cropped_logo_ccdry3.png"
             alt="mystery embassy international"
-            className="max-w-[120px]"
+            className="max-w-[120px] drop-shadow-lg hover:scale-105 transition-transform duration-300"
           />
-          <p className=" font-[200] text-stone-300  ">
-            Thank you for visiting us online. We invite you to join us in
-            worship, fellowship, and service as we grow together in faith &
-            love. God bless you!
+          <p className="font-light text-gray-300 leading-relaxed text-sm">
+            Thank you for visiting us online. We invite you to join us in worship, fellowship, and service as we grow together in faith & love. God bless you!
           </p>
-          <div className="footerSocials flex items-center gap-2 mt-2">
+          <div className="footerSocials flex items-center gap-3 mt-2">
             {footerSocials.map((social) => (
               <Link
                 to={social.ref}
                 target="_blank"
                 key={social.refName}
-                className="bg-transparent border border-[#a3a2a2] rounded-full text-white flex items-center justify-center hover:text-[var(--theme-yellow)]  ease-in-out duration-200 w-[40px] h-[40px] hover:border-[var(--theme-yellow)]"
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white flex items-center justify-center hover:text-[var(--theme-yellow)] hover:bg-[var(--theme-yellow)]/20 hover:border-[var(--theme-yellow)] transition-all duration-300 w-12 h-12 hover:scale-110 shadow-lg"
                 aria-label={`${social.refName} link`}
               >
                 {social.icon}
@@ -133,13 +131,13 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="div-2  md:w-[80%] place-self-center h-full flex flex-col items-start  gap-3">
-          <p className="text-white text-[1.4rem] uppercase">resources</p>
-          <menu className="useful-links flex flex-col items-center  justify-start w-full gap-3">
+        <div className="div-2 md:w-[80%] place-self-center h-full flex flex-col items-start gap-4">
+          <h4 className="text-white text-xl font-semibold uppercase tracking-wide">Resources</h4>
+          <menu className="useful-links flex flex-col items-start justify-start w-full gap-3">
             {resourceLinks.map((link) => (
               <Link
                 to={link.refLink}
-                className="text-stone-300 font-[200] "
+                className="text-gray-300 font-light hover:text-[var(--theme-yellow)] transition-colors duration-300 hover:translate-x-1"
                 key={link.ref}
               >
                 {link.ref}
@@ -147,26 +145,25 @@ const Footer = () => {
             ))}
           </menu>
         </div>
-        <div className="div-2 flex flex-col gap-3">
-          <p className="text-white text-[1.4rem] uppercase">contacts</p>
-          <p className="text-stone-300 font-[200] capitalize">
-            keep in touch with us via our various social media platforms to stay
-            updated.
+        <div className="div-2 flex flex-col gap-4">
+          <h4 className="text-white text-xl font-semibold uppercase tracking-wide">Contact</h4>
+          <p className="text-gray-300 font-light text-sm leading-relaxed">
+            Keep in touch with us via our various platforms to stay updated.
           </p>
-          <menu className="contacts flex flex-col  items-center gap-2">
+          <menu className="contacts flex flex-col items-start gap-3">
             {contactLinks.map((contact) => (
               <Link
                 key={contact.ref}
                 to={contact.refLink}
-                className="text-stone-300 font-[200] flex items-center gap-3"
+                className="text-gray-300 font-light flex items-center gap-3 hover:text-[var(--theme-yellow)] transition-colors duration-300 text-sm"
               >
-                {contact.icon} {contact.ref}
+                <span className="text-[var(--second-color)]">{contact.icon}</span> {contact.ref}
               </Link>
             ))}
           </menu>
         </div>
-        <div className="div-2 flex flex-col items-start gap-3">
-          <p className="text-white text-[1.4rem] uppercase">Location</p>
+        <div className="div-2 flex flex-col items-start gap-4">
+          <h4 className="text-white text-xl font-semibold uppercase tracking-wide">Location</h4>
           {/* <p className="text-stone-300 text-[.9rem] font-[200]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             fugiat laudantium, voluptatibus nam consectetur enim laborum aut
@@ -176,7 +173,7 @@ const Footer = () => {
           </p> */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.089405842192!2d-0.32081232566105006!3d5.553763833673532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfbdf3d2cd56d5%3A0x288d247b8da7f24b!2sMystery%20Embassy%20International!5e0!3m2!1sen!2sgh!4v1750716572963!5m2!1sen!2sgh"
-            className="w-full h-full"
+            className="w-full h-full rounded-lg border border-white/20 shadow-lg"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

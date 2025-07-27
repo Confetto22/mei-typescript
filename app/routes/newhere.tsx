@@ -112,7 +112,7 @@ const faqValues = [
 
 const Newhere = () => {
   return (
-    <section className="new_here">
+    <section className="new_here pt-20">
       <PageHead
         bgPic="bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')]"
         prevPage="Home"
@@ -120,7 +120,15 @@ const Newhere = () => {
         prevLink="/"
       />
 
-      <section className="main_activities p-8 flex flex-col items-center">
+      <section className="main_activities p-8 py-16 flex flex-col items-center bg-gradient-to-br from-gray-50 to-white">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-blue)] to-[var(--second-color)] mb-4">
+            Our Services
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Join us for these regular worship services and special events throughout the week.
+          </p>
+        </div>
         <Swiper
           // slidesPerView={3}
           spaceBetween={10}
@@ -150,13 +158,27 @@ const Newhere = () => {
           <div className="all_activities">
             {services.map((singleService) => (
               <SwiperSlide key={singleService.name}>
-                <div className="activity ">
-                  <div className="overflow-hidden h-5/6">
+                <div className="activity modern-card group hover:scale-105 transition-all duration-300">
+                  <div className="overflow-hidden h-64 rounded-t-2xl">
                     <img
                       src={singleService.img}
-                      alt=""
-                      className="w-full h-full"
+                      alt={`${singleService.name} service`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
                     />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">{singleService.name}</h3>
+                    <div className="space-y-2 text-sm text-gray-600">
+                      <p className="flex items-center gap-2">
+                        <LuClock7 className="text-[var(--second-color)]" />
+                        {singleService.day} @ {singleService.time}
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <TfiLocationPin className="text-[var(--second-color)]" />
+                        {singleService.location}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
@@ -165,8 +187,8 @@ const Newhere = () => {
         </Swiper>
       </section>
 
-      <section className="newhere_loc py-24 px-4 flex flex-col gap-6 md:flex-row md:justify-center md:items-center md:gap-12 ">
-        <div className="loc_text md:w-3/6 md:max-w-[500px] flex flex-col gap-2 md:gap-4">
+      <section className="newhere_loc py-24 px-4 flex flex-col gap-8 md:flex-row md:justify-center md:items-center md:gap-12 max-w-7xl mx-auto">
+        <div className="loc_text md:w-3/6 md:max-w-[500px] flex flex-col gap-4 md:gap-6">
           <SecHeading
             substyle={
               " text-[.8rem] md:text-[1rem]  text-white bg-[var(--second-color)] "
@@ -205,23 +227,25 @@ const Newhere = () => {
             </div>
           </div>
         </div>
-        <div className="loc_map  min-h-[40vh] max-h-[50vh] lg:min-h-[60vh] md:w-3/6">
+        <div className="loc_map min-h-[40vh] max-h-[50vh] lg:min-h-[60vh] md:w-3/6 rounded-2xl overflow-hidden shadow-2xl">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15884.355996832388!2d-0.33670032534401534!3d5.553824171056825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfbdf3d2cd56d5%3A0x288d247b8da7f24b!2sHouse%20of%20Mystery%20Chapel%20International!5e0!3m2!1sen!2sus!4v1723768237244!5m2!1sen!2sus"
             allowFullScreen
             loading="lazy"
-            className="w-full h-full min-h-[40vh] max-h-[50vh] lg:min-h-[60vh]"
+            className="w-full h-full min-h-[40vh] max-h-[50vh] lg:min-h-[60vh] border-0"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </section>
-      <div className="expect p-8 py-24 flex flex-col gap-4 md:flex-row md:items-center md:justify-center md:gap-8 w-full bg-[var(--dark-blue)] text-white md:max-w-full ">
-        <img
-          src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp"
-          alt="what to expect"
-          className="w-full md:w-3/6 lg:w-[40%] md:aspect-[9/8] object-cover"
-        />
-        <div className="expect_text flex flex-col items-start gap-4 md:w-3/6 md:pr-12">
+      <div className="expect p-8 py-24 flex flex-col gap-8 md:flex-row md:items-center md:justify-center md:gap-12 w-full bg-gradient-to-br from-[var(--dark-blue)] via-[#001a36] to-[#000d1a] text-white relative overflow-hidden">
+        <div className="w-full md:w-3/6 lg:w-[40%] rounded-2xl overflow-hidden shadow-2xl group">
+          <img
+            src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp"
+            alt="what to expect"
+            className="w-full md:aspect-[9/8] object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+        </div>
+        <div className="expect_text flex flex-col items-start gap-6 md:w-3/6 md:pr-12 relative z-10">
           <SecHeading
             substyle={
               " text-[.8rem] md:text-[1rem]  text-white bg-[var(--second-color)] "
@@ -265,12 +289,12 @@ const Newhere = () => {
           </p>
         </div>
       </div>
-      <section className="faq_welcome px-4 py-24 flex flex-col-reverse gap-6 mt-4 items-center md:flex-row-reverse md:justify-center md:gap-8 ">
-        <div className="welcome_vidBox w-full md:w-3/6 lg:w-[43%]">
+      <section className="faq_welcome px-4 py-24 flex flex-col-reverse gap-8 items-center md:flex-row-reverse md:justify-center md:gap-12 max-w-7xl mx-auto">
+        <div className="welcome_vidBox w-full md:w-3/6 lg:w-[43%] rounded-2xl overflow-hidden shadow-2xl group">
           <img
             src="https://res.cloudinary.com/dv9aqxptd/image/upload/v1722542287/homchapel/IMG_4195_kmdmjb.jpg"
-            alt=""
-            className="w-full h-full"
+            alt="Church community gathering"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
         </div>
 

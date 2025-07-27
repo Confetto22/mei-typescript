@@ -35,8 +35,8 @@ const HeroCard = () => {
   ];
 
   return (
-    <section className="herocard relative h-screen w-full bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')] bg-cover bg-center">
-      <div className="cover min-h-screen bg-gradient-to-r from-[#001a36c6] to-[#350d008f] p-6 md:py-16 md:px-8 font-[var(--main-font)] flex flex-col justify-center items-center md:text-left text-center md:items-start gap-6">
+    <section className="herocard relative h-screen w-full bg-[url('https://res.cloudinary.com/dv9aqxptd/image/upload/v1737054656/homchapel/DSC_0853_z9hg0z.webp')] bg-cover bg-center bg-fixed">
+      <div className="cover min-h-screen bg-gradient-to-br from-[#001a36e6] via-[#001a36cc] to-[#350d00bf] p-6 md:py-16 md:px-8 font-[var(--main-font)] flex flex-col justify-center items-center md:text-left text-center md:items-start gap-8 pt-24">
         <div className="churchname flex flex-col gap-0">
           <TextGenerateEffect
             className={churchnameStyles}
@@ -69,36 +69,38 @@ const HeroCard = () => {
         <TypewriterEffect
           cursorClassName="string"
           words={typewriterWords}
-          className="capitalize text-[1rem] md:text-[1.3rem] font-[200] text-white"
+          className="capitalize text-[1rem] font-[200] text-white"
         />
 
         {/* <p className="capitalize text-[1rem] font-[200] text-white">
           bridging the gap between divinity & humanity
         </p> */}
-        <div className="heroBtns flex flex-col items-center md:items-start gap-5 text-white">
+        <div className="heroBtns flex flex-col md:flex-row items-center md:items-start gap-6 text-white">
           <Link
             to={"/contact"}
-            className="bg-[var(--second-color)] py-4 px-5 uppercase font-bold text-[.8rem] hover:opacity-70 ease-in-out duration-300"
+            className="group relative overflow-hidden bg-[var(--second-color)] py-4 px-8 uppercase font-bold text-sm rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
           >
-            join us this sunday
+            <span className="relative z-10">Join Us This Sunday</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--second-color)] to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </Link>
           <Link
             to={"https://www.facebook.com/mysteryembassy"}
             target="_blank"
-            className="text-[var(--text-color)] bg-white py-3 px-5 font-bold uppercase text-[.8rem] hover:opacity-70 ease-in-out duration-300"
+            className="group relative overflow-hidden text-[var(--text-color)] bg-white/95 backdrop-blur-sm py-4 px-8 font-bold uppercase text-sm rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 border border-white/20"
           >
-            watch live
+            <span className="relative z-10">Watch Live</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-white to-gray-100 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </Link>
         </div>
       </div>
-      <div className="bg-[#fff] px-4 absolute bottom-0 right-0   rounded-tl-[6rem] flex items-center flex-col justify-center  gap-1 max-w-[460px] py-5 text-[#242424]">
-        <span className="text-[#fff] bg-[var(--second-color)]  font-bold px-2 text-[1rem] md:text-[1.3rem]">
+      <div className="bg-white/95 backdrop-blur-md px-6 absolute bottom-0 right-0 rounded-tl-[6rem] flex items-center flex-col justify-center gap-2 max-w-[460px] py-8 text-[#242424] shadow-2xl border-l border-t border-white/30">
+        <span className="text-white bg-gradient-to-r from-[var(--second-color)] to-red-600 font-bold px-4 py-1 text-lg md:text-xl rounded-full shadow-lg">
           07:30 AM
         </span>
-        <p className="text text-[1.7rem] font-extrabold uppercase md:text-[3rem] text-black">
+        <p className="text-2xl md:text-4xl font-extrabold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[var(--dark-blue)] to-[var(--second-color)]">
           Sundays
         </p>
-        <p className="capitalize ">join us & be blessed</p>
+        <p className="capitalize text-gray-600 font-medium">Join us & be blessed</p>
       </div>
     </section>
   );
